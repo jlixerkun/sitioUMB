@@ -1,32 +1,57 @@
 @import 'variables';
 body {
-  background: $claro;
-  font-family: $openSans;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  * {
-    box-sizing: border-box;
-  }
+   background: $claro;
+   font-family: $openSans;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   * {
+      box-sizing: border-box;
+   }
 }
 
-h1,h2,h3, h4, h5, h6{
-  font-family: $mcLaren;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: $mcLaren;
 }
 
-.pagina{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+.pagina {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 100vh;
 }
 
-.cabeza{
-  height: 120px;
+.contenedor {
+   width: 90%;
+   max-width: 1280px;
+   min-width: 290px;
 }
-.cuerpo{}
-.pie{
-  height: 180px;
-  color: $claro;
-  background: $oscuro;
+
+.cabeza {
+   background: $claroMedio;
+   color: $acento;
+   display: flex;
+   justify-content: center;
+   height: 120px;
+   box-shadow: 0 4px 0 $color0, 0 8px 0 $color1, 0 12px 0 $color2, 0 16px 0 $color3, 0 20px 0 $color4;
+}
+
+.cuerpo {
+   padding: 20px 0;
+   display: flex;
+   justify-content: center;
+}
+
+.pie {
+   display: flex;
+   justify-content: center;
+   height: 180px;
+   color: $claro;
+   background: $oscuro;
+   box-shadow: 0 -4px 0 $color4, 0 -8px 0 $color3, 0 -12px 0 $color2, 0 -16px 0 $color1, 0 -20px 0 $color0;
 }

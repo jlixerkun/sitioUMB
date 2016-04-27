@@ -1,34 +1,59 @@
 @import url(https://fonts.googleapis.com/css?family=McLaren|Open+Sans:400,300);
-/* line 2, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 2, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
 body {
   background: #DBD8A2;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
-  /* line 8, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 8, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
   body * {
     box-sizing: border-box; }
 
-/* line 13, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
-h1, h2, h3, h4, h5, h6 {
+/* line 18, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "McLaren", cursive; }
 
-/* line 17, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 22, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
 .pagina {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh; }
 
-/* line 24, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
-.cabeza {
-  height: 120px; }
+/* line 29, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+.contenedor {
+  width: 90%;
+  max-width: 1280px;
+  min-width: 290px; }
 
-/* line 28, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 35, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+.cabeza {
+  background: #C4AC30;
+  color: #D74F33;
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  box-shadow: 0 4px 0 #4B3E4D, 0 8px 0 #1E8C93, 0 12px 0 #DBD8A2, 0 16px 0 #C4AC30, 0 20px 0 #D74F33; }
+
+/* line 44, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+.cuerpo {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; }
+
+/* line 50, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
 .pie {
+  display: flex;
+  justify-content: center;
   height: 180px;
   color: #DBD8A2;
-  background: #4B3E4D; }
+  background: #4B3E4D;
+  box-shadow: 0 -4px 0 #D74F33, 0 -8px 0 #C4AC30, 0 -12px 0 #DBD8A2, 0 -16px 0 #1E8C93, 0 -20px 0 #4B3E4D; }
 
 /*# sourceMappingURL=miEstilo.css.map */
