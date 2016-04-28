@@ -1,16 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=McLaren|Open+Sans:400,300);
-/* line 2, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+@import url(https://fonts.googleapis.com/css?family=McLaren|Open+Sans:400,300|Source+Sans+Pro:400,300);
+/* line 2, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 body {
   background: #DBD8A2;
+  box-sizing: border-box;
+  color: #444;
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-  /* line 8, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+  padding: 0; }
+  /* line 9, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   body * {
     box-sizing: border-box; }
 
-/* line 18, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+/* line 19, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 h1,
 h2,
 h3,
@@ -19,41 +20,94 @@ h5,
 h6 {
   font-family: "McLaren", cursive; }
 
-/* line 22, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+/* line 23, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .pagina {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh; }
 
-/* line 29, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+/* line 30, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .contenedor {
   width: 90%;
-  max-width: 1280px;
-  min-width: 290px; }
+  max-width: 840px;
+  min-width: 280px; }
 
-/* line 35, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+/* line 36, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+a {
+  color: #1E8C93;
+  text-decoration: none; }
+  /* line 39, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  a:hover {
+    color: #1a787e; }
+
+/* line 43, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.titulo {
+  color: #D74F33;
+  text-shadow: 0 1px 0 #4B3E4D;
+  margin: 20px 0 0; }
+
+/* line 48, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.subtitulo {
+  color: #9e351f;
+  margin: 0 0 20px; }
+
+/* line 52, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.texto {
+  color: #444; }
+
+/* line 55, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.seccion {
+  margin: 40px 0 20px; }
+
+/* line 60, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .cabeza {
   background: #C4AC30;
-  color: #D74F33;
+  color: #DBD8A2;
+  text-shadow: 0 1px 0 #4B3E4D;
   display: flex;
   justify-content: center;
-  height: 120px;
+  position: fixed;
+  width: 100vw;
+  height: 70px;
   box-shadow: 0 4px 0 #4B3E4D, 0 8px 0 #1E8C93, 0 12px 0 #DBD8A2, 0 16px 0 #C4AC30, 0 20px 0 #D74F33; }
 
-/* line 44, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
+/* line 71, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .cuerpo {
   padding: 20px 0;
-  display: flex;
-  justify-content: center; }
-
-/* line 50, D:/xampp/htdocs/sitioUmb/css/miEstilo.scss */
-.pie {
+  margin-top: 70px;
   display: flex;
   justify-content: center;
-  height: 180px;
+  line-height: 1.6;
+  font-size: 16px; }
+
+/* line 80, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.pie {
+  padding: 20px 0;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 70px;
   color: #DBD8A2;
-  background: #4B3E4D;
-  box-shadow: 0 -4px 0 #D74F33, 0 -8px 0 #C4AC30, 0 -12px 0 #DBD8A2, 0 -16px 0 #1E8C93, 0 -20px 0 #4B3E4D; }
+  background: #444;
+  box-shadow: 0 -2px 0 #D74F33, 0 -4px 0 #C4AC30, 0 -6px 0 #DBD8A2, 0 -8px 0 #1E8C93, 0 -10px 0 #4B3E4D; }
+  /* line 89, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .pie ul {
+    padding: 0;
+    margin: 0;
+    color: #8f7892;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; }
+    /* line 96, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    .pie ul li {
+      padding-right: 10px; }
+      /* line 98, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+      .pie ul li a {
+        color: inherit; }
+        /* line 100, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+        .pie ul li a:hover {
+          color: #a694a9;
+          text-shadow: 0 0 1px #DBD8A2; }
 
 /*# sourceMappingURL=miEstilo.css.map */

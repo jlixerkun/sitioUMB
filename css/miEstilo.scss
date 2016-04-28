@@ -1,13 +1,14 @@
 @import 'variables';
 body {
-   background: $claro;
-   font-family: $openSans;
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   * {
-      box-sizing: border-box;
-   }
+    background: $claro;
+    box-sizing: border-box;
+    color: #444;
+    font-family: $openSans;
+    margin: 0;
+    padding: 0;
+    * {
+        box-sizing: border-box;
+    }
 }
 
 h1,
@@ -16,42 +17,91 @@ h3,
 h4,
 h5,
 h6 {
-   font-family: $mcLaren;
+    font-family: $mcLaren;
 }
 
 .pagina {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 .contenedor {
-   width: 90%;
-   max-width: 1280px;
-   min-width: 290px;
+    width: 90%;
+    max-width: 840px;
+    min-width: 280px;
 }
 
+a {
+    color: $frio;
+    text-decoration: none;
+    &:hover{
+        color:darken($frio,5%);
+    }
+}
+.titulo {
+    color: $acento;
+    text-shadow: 0 1px 0 $oscuro;
+    margin: 20px 0 0;
+}
+.subtitulo{
+    color:darken($acento,15%);
+    margin: 0 0 20px;
+}
+.texto {
+    color: #444;
+}
+.seccion{
+    margin: 40px 0 20px;
+}
+
+//Secciones
 .cabeza {
-   background: $claroMedio;
-   color: $acento;
-   display: flex;
-   justify-content: center;
-   height: 120px;
-   box-shadow: 0 4px 0 $color0, 0 8px 0 $color1, 0 12px 0 $color2, 0 16px 0 $color3, 0 20px 0 $color4;
+    background: $claroMedio;
+    color: $claro;
+    text-shadow: 0 1px 0 $oscuro;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    box-shadow: 0 4px 0 $color0, 0 8px 0 $color1, 0 12px 0 $color2, 0 16px 0 $color3, 0 20px 0 $color4;
 }
-
 .cuerpo {
-   padding: 20px 0;
-   display: flex;
-   justify-content: center;
+    padding: 20px 0;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 .pie {
-   display: flex;
-   justify-content: center;
-   height: 180px;
-   color: $claro;
-   background: $oscuro;
-   box-shadow: 0 -4px 0 $color4, 0 -8px 0 $color3, 0 -12px 0 $color2, 0 -16px 0 $color1, 0 -20px 0 $color0;
+    padding: 20px 0;
+    font-family: $sourceSans;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    color: $claro;
+    background: #444;
+    box-shadow: 0 -2px 0 $color4, 0 -4px 0 $color3, 0 -6px 0 $color2, 0 -8px 0 $color1, 0 -10px 0 $color0;
+    ul {
+        padding: 0;
+        margin: 0;
+        color: lighten($oscuro, 25%);
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        li {
+            padding-right: 10px;
+            a {
+                color: inherit;
+                &:hover{
+                    color: lighten($oscuro,35%);
+                    text-shadow: 0 0 1px $claro;
+                }
+            }
+        }
+    }
 }
