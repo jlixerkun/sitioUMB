@@ -1,4 +1,5 @@
 @import 'variables';
+//Elementos
 body {
     background: $claro;
     box-sizing: border-box;
@@ -20,6 +21,13 @@ h6 {
     font-family: $mcLaren;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+// Modulos
 .pagina {
     display: flex;
     flex-direction: column;
@@ -36,29 +44,82 @@ h6 {
 a {
     color: $frio;
     text-decoration: none;
-    &:hover{
-        color:darken($frio,5%);
+    &:hover {
+        color: darken($frio, 5%);
     }
 }
+
 .titulo {
     color: $acento;
     text-shadow: 0 1px 0 $oscuro;
     margin: 20px 0 0;
 }
-.subtitulo{
-    color:darken($acento,15%);
+
+.subtitulo {
+    color: darken($acento, 15%);
     margin: 0 0 20px;
 }
+
 .texto {
     color: #444;
 }
-.seccion{
+
+.seccion {
     margin: 40px 0 20px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-sitio {
+    flex: 1;
+    a {
+        color: $claro;
+        &:hover {
+            color: lighten($claro, 10%);
+        }
+    }
+}
+
+.navegacion-principal {
+    flex: 1;
+    min-width: 400px;
+    //    color: darken($claroMedio, 25%);
+//    text-shadow: none;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        a {
+            color: $claro;
+            &:hover {
+                color: $claro;
+            }
+        }
+    }
+}
+
+.navegacion-secundaria {
+    display: flex;
+    justify-content: center;
+}
+
+//Utilidades
+.texto-derecha {
+    text-align: right;
+}
+
+.enunciado {
+    // agregar cursiva y color más tenue a los enunciados para resaltar el texto
+    color: #666;
+    font-style: italic;
 }
 
 //Secciones
 .cabeza {
-    background: $claroMedio;
+    background: rgba($claroMedio, 0.85);
     color: $claro;
     text-shadow: 0 1px 0 $oscuro;
     display: flex;
@@ -66,8 +127,10 @@ a {
     position: fixed;
     width: 100vw;
     height: 70px;
-    box-shadow: 0 4px 0 $color0, 0 8px 0 $color1, 0 12px 0 $color2, 0 16px 0 $color3, 0 20px 0 $color4;
+    box-shadow: 0 2px 0 $color0, 0 4px 0 $color1, 0 6px 0 $color2, 0 8px 0 $color3, 0 10px 0 $color4, 0 10px 2px #000;
+    ;
 }
+
 .cuerpo {
     padding: 20px 0;
     margin-top: 70px;
@@ -87,18 +150,18 @@ a {
     background: #444;
     box-shadow: 0 -2px 0 $color4, 0 -4px 0 $color3, 0 -6px 0 $color2, 0 -8px 0 $color1, 0 -10px 0 $color0;
     ul {
-        padding: 0;
-        margin: 0;
         color: lighten($oscuro, 25%);
-        list-style: none;
         display: flex;
         justify-content: flex-start;
         li {
-            padding-right: 10px;
+            padding-right: 30px;
+            &:last-of-type {
+                padding: 0;
+            }
             a {
                 color: inherit;
-                &:hover{
-                    color: lighten($oscuro,35%);
+                &:hover {
+                    color: lighten($oscuro, 35%);
                     text-shadow: 0 0 1px $claro;
                 }
             }
