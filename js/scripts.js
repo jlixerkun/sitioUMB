@@ -1,0 +1,20 @@
+$(document).ready(function(){
+    //Get the canvas & context 
+    var c = $('.canvas-fluido');
+    var ct = c.get(0).getContext('2d');
+    var container = $(c).parent();
+//    resizeCanvas;
+    //Ejecutar la fucnion al redimensionar la ventana
+    $(window).resize( resizeCanvas );    
+    
+    
+    function resizeCanvas(){
+        c.attr('width', container.width());
+        c.attr('height', container.height());
+    }
+    
+    //Ejecutar la funcion al cargar la pagina 
+    resizeCanvas();
+    
+     
+})
