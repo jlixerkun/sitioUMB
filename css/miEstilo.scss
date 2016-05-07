@@ -306,13 +306,15 @@ legend, label {
 fieldset {
     margin-bottom: 1em;
 }
-input {
+input, select {
     padding: 0.5em;
     border-radius: 0.2em;
     border: 1px solid $frio;
     flex: 1;
-    background: rgba(#fff,0.1);
-    color: #666;
+    &[type="color"] {
+        padding:0;
+        height: 30px;
+    }
 }
 label {
     width: 150px;

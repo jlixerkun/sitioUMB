@@ -297,21 +297,23 @@ fieldset {
   margin-bottom: 1em; }
 
 /* line 309, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
-input {
+input, select {
   padding: 0.5em;
   border-radius: 0.2em;
   border: 1px solid #1E8C93;
-  flex: 1;
-  background: rgba(255, 255, 255, 0.1);
-  color: #666; }
+  flex: 1; }
+  /* line 314, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  input[type="color"], select[type="color"] {
+    padding: 0;
+    height: 30px; }
 
-/* line 317, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 319, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 label {
   width: 150px;
   padding-right: 10px;
   text-align: right; }
 
-/* line 322, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 324, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .campo {
   align-items: center;
   display: flex;

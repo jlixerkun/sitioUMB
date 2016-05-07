@@ -3,18 +3,16 @@ $(document).ready(function(){
     var c = $('.canvas-fluido');
     var ct = c.get(0).getContext('2d');
     var container = $(c).parent();
-//    resizeCanvas;
-    //Ejecutar la fucnion al redimensionar la ventana
+    
+    //Ejecuta la fucnion al redimensionar la ventana
     $(window).resize( resizeCanvas );    
     
+    //Ejecuta la funcion al cargar la pagina 
+    resizeCanvas();
     
+     
     function resizeCanvas(){
         c.attr('width', container.width());
         c.attr('height', container.height());
     }
-    
-    //Ejecutar la funcion al cargar la pagina 
-    resizeCanvas();
-    
-     
 })
