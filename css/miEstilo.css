@@ -548,4 +548,12 @@ pre {
   box-shadow: 0 0 0 3px #C4AC30, 0 0 0 7px #1E8C93, 0 0 0 10px #DBD8A2, 0 0 0 13px #4B3E4D, 0 0 0 17px #D74F33;
   margin: 2em auto; }
 
+/* line 544, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.modelo-caja {
+  width: 400px;
+  background: #fff;
+  border: 1px solid red;
+  margin: 30px;
+  padding: 10px; }
+
 /*# sourceMappingURL=miEstilo.css.map */
