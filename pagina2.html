@@ -44,11 +44,11 @@
                     <div class="main" role="main">
                         <p>He aquí 3 elementos canvas con diferentes tamaños y colores. Todo manejado desde el css</p>
                         <p>Sin embargo, el sitio está diseñado para ser responsive, y el elemento canvas define sus atributos de alto y ancho, haciéndolo rígido.</p>
-                        <p>Podemos aplicar <a href="http://ameijer.nl/2011/08/resizable-html5-canvas/" target="_blank">algo de javascript (jQuery)</a> para lograr fluidez también en el elemento canvas.</p>
 
                         <canvas id="canvas1" width="100" height="100"></canvas>
                         <canvas id="canvas2" width="200" height="100"></canvas>
                         <canvas id="canvas3" width="400" height="100"></canvas>
+                        <p>Podemos aplicar <a href="http://ameijer.nl/2011/08/resizable-html5-canvas/" target="_blank">algo de javascript (jQuery)</a> para lograr fluidez también en el elemento canvas.</p>
                         <p>Este canvas es fluido...</p>
                         <div class="canvas-container">
                             <canvas id="canvas4" class="canvas-fluido" width="400" height="100"></canvas>
@@ -86,14 +86,14 @@
                                     <label for="email">Email</label>
                                     <input type="email" name="email" id="email" placeholder="Escriba email aquí" required>
                                 </div>
-                                
+
                                 <div class="campo">
                                     <label for="fecha">Fecha de nacimiento</label>
                                     <input type="date" name="date_control" id="fecha">
                                     <label for="hora">Hora de nacimiento</label>
                                     <input type="time" name="time_control" id="hora">
                                 </div>
-                                
+
                             </fieldset>
 
                             <fieldset name="Datos Laborales">
@@ -127,18 +127,18 @@
                                     <label for="url">Sitio web</label>
                                     <input type="url" name="url" id="url" placeholder="Escriba sitio web aquí">
                                 </div>
-                                
+
                                 <div class="campo">
                                     <label for="horas">Horas semanales</label>
                                     <input type="number" name="number_control" id="horas" min="20" max="60" step="5" value="20">
-                                    
+
                                     <label for="color">Color favorito</label>
                                     <input type="color" name="color_control" id="color" value="#ff9900">
                                 </div>
-                                
-                                
+
+
                             </fieldset>
-                            
+
                             <div class="campo">
                                 <input type="submit" value="Enviar datos">
                             </div>
@@ -166,15 +166,485 @@
                         </hgroup>
                     </header>
                     <div class="main" role="main">
-                        
-                        
-                        
+
+                        <form action="#" method="post" id="seleccion-cita">
+                            <div class="center">
+                                <img src="img/salud.jpg" title="Buena Salud EPS" alt="logo Buena Salud">
+                            </div>
+                            <fieldset>
+                                <legend>Datos del paciente</legend>
+                                <div class="campo">
+                                    <label for="nombres">Nombres:</label>
+                                    <input type="text" name="nombres" id="nombres">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="apellido1">Primer apellido:</label>
+                                    <input type="text" name="apellido1" id="apellido1">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="apellido2">Segundo apellido:</label>
+                                    <input type="text" name="apellido2" id="apellido2">
+                                </div>
+
+                                <div class="campo izquierda">
+                                    <label for="nombres">Menor de edad:</label>
+                                    <span class="radio-label">Si <input type="radio" value="si" name="menor"></span>
+                                    <span class="radio-label">No <input type="radio" value="no" name="menor"></span>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="documento">Documento #:</label>
+                                    <input type="number" name="documento" id="documento">
+                                    <label class="corta" for="origenDoc">De:</label>
+                                    <input list="ciudades" name="origenDoc" id="origenDoc">
+                                    <datalist id="ciudades">
+                                        <option value="Barranquilla">
+                                        <option value="Bogotá">
+                                        <option value="Bucaramanga">
+                                        <option value="Cali">
+                                        <option value="Cartagena">
+                                        <option value="Ibagué">
+                                        <option value="Medellín">
+                                        <option value="Neiva">
+                                        <option value="Pasto">
+                                    </datalist>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="telefono">Teléfono:</label>
+                                    <input type="number" name="telefono" id="telefono">
+                                    <label for="celular" class="corta">Celular:</label>
+                                    <input type="number" name="celular" id="celular">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="Dirección">Dirección</label>
+                                    <textarea></textarea>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Datos de la cita</legend>
+                                <div class="campo">
+                                    <label for="ciudad-cita">Ciudad:</label>
+                                    <input type="text" list="ciudad-cita" name="ciudad-cita">
+                                    <datalist id="ciudad-cita">
+                                        <option value="Barranquilla">
+                                            <option value="Bogotá">
+                                                <option value="Bucaramanga">
+                                                    <option value="Cali">
+                                                        <option value="Cartagena">
+                                                            <option value="Ibagué">
+                                                                <option value="Medellín">
+                                                                    <option value="Neiva">
+                                                                        <option value="Pasto">
+                                    </datalist>
+
+                                    <label for="depto-cita">Departamento:</label>
+                                    <input type="text" list="depto-cita" name="depto-cita">
+                                    <datalist id="depto-cita">
+                                        <option value="Antioquia">
+                                            <option value="Bolívar">
+                                                <option value="Boyacá">
+                                                    <option value="Cundinamarca">
+                                                        <option value="Huila">
+                                                            <option value="Magdalena">
+                                                                <option value="Nariño">
+                                                                    <option value="Tolima">
+                                                                        <option value="Valle del Cauca">
+                                    </datalist>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="tipo-cita">Tipo de Cita:</label>
+                                    <select name="tipo-cita" id="tipo-cita">
+                                        <option value="General">General</option>
+                                        <option value="Especialista">Especialista</option>
+                                    </select>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="fecha-cita">Fecha cita:</label>
+                                    <input type="date" name="date-control" id="fecha-cita">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="centro-medico">Centro médico:</label>
+                                    <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
+                                    <label for="barrio">Barrio:</label>
+                                    <input type="text" name="barrio" id="barrio" placeholder="Barrio">
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                        <footer class="colofon-ejercicio">
+                            <p>El uso de formularios hace que la web sea una herramienta valiosa para la recopilación y almacenamiento de información.</p>
+                        </footer>
+
                     </div>
                 </article>
 
+                <article class="ejercicio">
+                    <header class="titulo-ejercicio">
+                        <hgroup>
+                            <h1 class="titulo">Hojas de Estilo</h1>
+                            <h3 class="subtitulo">Ejercicio 4</h3>
+                        </hgroup>
+                    </header>
+                    <div class="main" role="main">
+                        <p><strong>Este documento usa hojas de estilo para controlar la presentación de todos sus elementos desde su primera versión.</strong></p>
+                        <p>Las hojas de estilo externas fueron la solución a un gran dolor de cabeza para el diseño web.</p>
+                        <p>Mantener los estilos <i>inline</i> es bastante complicado.</p>
+                        <p>Supongamos que se aplicara un estilo a los párrafos de un sitio así:</p>
+                        <pre>&lt;p style="font-family:Verdana,sans-serif; color:red; ..."&gt;</pre>
+                        <p>el sitio presenta una gran cantidad de párrafos y todos tienen este estilo.</p>
+                        <p>Un día se determina que los párrafos deben tener otro color, porque el nuevo diseño no va bien con ese color de texto...</p>
+                        <p>La tarea sería bastante tediosa y propensa al error. Si, por el contrario hubiera una hoja de estilo externa podríamos realizar el cambio una o cuantas veces quisiéramos cambiando una sóla línea de código, y este cambio sería consistente. Así:</p>
+<pre>p { 
+    color:red;
+    font-family: Verdana, 
+    sans-serif;
+    font-size:1.5em;
+    ...
+}</pre>
+                        <p>Hay que tener en cuenta el significado de <i>cascada</i> en el término <i><abbr title="Hojas de Estilo en Cascada">CSS</abbr></i> implica la superposición de estilos. Es decir, la presentación de cierto elemento en un documento html puede estar definida por varias reglas en varias partes.</p>
+                        <p>Los estilos aplicados directamente en el elemento por medio del atributo <code>&lt;<i>elemento</i> style="..."&gt;</code> tienen mayor relevancia que los que puedan afectar al mismo elemento por estar definidos dentro de on bloque de estilo en el documento, lo que se conoce como una hoja de estilo interna, contenidos dentro de la etiqueta <code>&lt;style&gt;<i>elemento</i>{ ... }&lt;/style&gt;</code> </p>
+                        <p>Al manejar hojas de estilo externas, podemos mantener separada la capa de contenido de un sitio o documento de la presentación. con el uso de los atributos <code>id="" &amp; class=""</code> podemos definir semánticamente grupos de elementos, para luego referenciarlos desde las hojas de estilo externas. Estas hojas de estilo externas también pueden superponerse, definiendo el mismo estilo con valores diferentes para el mismo elemento, caso en el cual se da prelación al que se haya definido más adelante</p>
+                        <p>El orden de importancia o relevancia es el siguiente:</p>
+                        <ol>
+                            <li>Estilos <i>inline</i> <code>&lt;<i>elemento</i> style="..."&gt;</code></li>
+                            <li>Hojas de estilo en el documento <code>&lt;style&gt;<i>elemento</i>{ ... }&lt;/style&gt;</code></li>
+                            <li>Hojas de estilo en el externas <code>&lt;link rel="stylesheet" href="..."&gt;</code></li>
+                        </ol>
+                        <p>No obstante el gran avance que representó la introducción del CSS, el CSS2 y el CSS3, no es un lenguaje de programación. Simplemente es declarativo. No goza de las ventajas de cualquier lenguaje de programación como funciones, variables, estructuras de control, etc. Por eso se crearon lenguajes como el LESS o el SASS (SCSS), que proveen una interfaz de preprocesamiento para la producción de CSS más eficiente.</p>
+                        <p>En este ejericio estoy utilizando SCSS y la característica del editor <i>Brackets</i> que por medio de un plugin me permite desentenderme del proceso de compilación del código SCSS.</p>
+                        <p>La principal ventaja de emplear SCSS (a mi modo de ver) es la compatibilidad con el CSS, ya que este último se define como un subconjunto del SCSS. Es decir, que todo CSS válido <strong>es a su vez SCSS válido</strong></p>
+                    </div>
+                    <footer class="colofon-ejercicio">
+                        <p>Es casi imposible pensar en desarrollar cualquier tipo de sitio web sin emplear hojas de estilo en cascada. Una excepción a la regla se da en el diseño de email html, en donde para lograr la mayor consistencia entre todos los clientes de correo, <strong>debe</strong> hacerse uso de los estilos <i>inline</i></p>
+                    </footer>
+                </article>
 
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Enlace de hojas de estilo externas</h1>
+                        <h3 class="subtitulo">Ejercicio 5</h3>
+                    </header>
+                    <div class="main" role="main">
+                        <p>Desde la primera versión, este documento emplea hojas de estilo externas enlazadas</p>
+                        <div class="center">
+                            <figure>
+                                <img class="responsive" src="img/CSS.png">
+                                <figcaption>Cabeza de este documento</figcaption>
+                            </figure>
+                        </div>
+                        <p>Un muy buen recurso para dominar selectores propios del CSS3, muy útiles para lograr patrones complejos, es este post de codetuts que ha sido traducido a varios idiomas: <a href="http://code.tutsplus.com/es/tutorials/the-30-css-selectors-you-must-memorize--net-16048" title="Los 30 selectores CSS que debes memorizar" target="_blank">Los 30 selectores CSS que debes memorizar</a></p>
+                        <p>Trabajar con SCSS permite por ejemplo ir definiendo propiedades de manera acumulativa. Es decir, definir primero propiedades para un elemento, y luego definir propiedades para ese elemento con una clase, o con determinado atributo, en fin... aumentar la productividad.</p>
+                        <div class="center">
+                            <figure>
+                                <img src="img/scss.png" class="responsive">
+                                <figcaption>Bendito el SCSS</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <footer class="colofon-ejercicio">
+                        <p>Como lo mencioné anteriormente, es impensable hoy en día el desarrollo de un sitio web de ningún tipo sin emplear hojas de estilo externas que permitan manipular la presentación de manera centralizada. En este sitio estoy escribiendo SCSS que luego es compilado en CSS.</p>
+                    </footer>
+                </article>
 
-
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Calendario</h1>
+                        <h3 class="subtitulo">Ejercicio 6</h3>
+                    </header>
+                    <div class="main" role="main">
+                        <h4>Calendario Flexbox</h4>
+                        <div class="calendario">
+                            <ul class="dias-semana">
+                                <li>L<span class="oculta-movil">unes</span></li>
+                                <li>M<span class="oculta-movil">artes</span></li>
+                                <li>M<span class="oculta-movil">iércoles</span></li>
+                                <li>J<span class="oculta-movil">ueves</span></li>
+                                <li>V<span class="oculta-movil">iernes</span></li>
+                                <li>S<span class="oculta-movil">ábado</span></li>
+                                <li>D<span class="oculta-movil">omingo</span></li>
+                            </ul>
+                            <ul class="dias-mes">
+                                <li class="blank"></li>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>11</li>
+                                <li>12</li>
+                                <li>13</li>
+                                <li class="festivo">14</li>
+                                <li>15</li>
+                                <li>16</li>
+                                <li>17</li>
+                                <li>18</li>
+                                <li>19</li>
+                                <li>20</li>
+                                <li>21</li>
+                                <li>22</li>
+                                <li>23</li>
+                                <li>24</li>
+                                <li>25</li>
+                                <li>26</li>
+                                <li>27</li>
+                                <li>28</li>
+                                <li>29</li>
+                                <li>30</li>
+                                <li>31</li>
+                            </ul>
+                            
+<!--
+                            <table class="mes">
+                                <thead class="d-semana">
+                                    <tr>
+                                        <th>Lunes</th>
+                                        <th>Martes</th>
+                                        <th>Miércoles</th>
+                                        <th>Jueves</th>
+                                        <th>Viernes</th>
+                                        <th>Sábado</th>
+                                        <th>Domingo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+-->
+                        </div>
+                    </div>
+                    <footer class="colofon-ejercicio">
+                        El calendario podía hacerse usando una tabla también. Sin embargo la solución flexbox permite tener un macaje más limpio, ya que los datos no son de naturaleza tabular.
+                    </footer>
+                </article>
+                
+                
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Tablas</h1>
+                        <h3 class="subtitulo">Ejercicio 7</h3>
+                    </header>
+                    <div class="main" role="main">
+                        
+                        
+                        <table class="tabla-zebra" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Año</th>
+                                    <th>Nombre</th>
+                                    <th>Lugar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1985</td>
+                                    <td>Rock in Rio</td>
+                                    <td>Brasil Río de Janeiro</td>
+                                </tr>
+                                <tr>
+                                    <td>1991</td>
+                                    <td>Rock in Rio II</td>
+                                    <td>Brasil Río de Janeiro</td>
+                                </tr>
+                                <tr>
+                                    <td>2001</td>
+                                    <td>Rock in Rio III</td>
+                                    <td>Brasil Río de Janeiro</td>
+                                </tr>
+                                <tr>
+                                    <td>2004</td>
+                                    <td>Rock in Rio Lisboa</td>
+                                    <td>Portugal Lisboa</td>
+                                </tr>
+                                <tr>
+                                    <td>2006</td>
+                                    <td>Rock in Rio Lisboa II</td>
+                                    <td>Portugal Lisboa</td>
+                                </tr>
+                                <tr>
+                                    <td>2008</td>
+                                    <td>Rock in Rio Lisboa III</td>
+                                    <td>Portugal Lisboa</td>
+                                </tr>
+                                <tr>
+                                    <td>2008</td>
+                                    <td>Rock in Rio Madrid</td>
+                                    <td>España Madrid</td>
+                                </tr>
+                                <tr>
+                                    <td>2010</td>
+                                    <td>Rock in Rio Lisboa IV</td>
+                                    <td>Portugal Lisboa</td>
+                                </tr>
+                                <tr>
+                                    <td>2010</td>
+                                    <td>Rock in Rio Madrid II</td>
+                                    <td>España Madrid</td>
+                                </tr>
+                                <tr>
+                                    <td>2011</td>
+                                    <td>Rock in Rio IV</td>
+                                    <td>Brasil Río de Janeiro</td>
+                                </tr>
+                                <tr>
+                                    <td>2012</td>
+                                    <td>Rock in Rio Lisboa V</td>
+                                    <td>Portugal Lisboa</td>
+                                </tr>
+                                <tr>
+                                    <td>2012</td>
+                                    <td>Rock in Rio Madrid III</td>
+                                    <td>España Madrid</td>
+                                </tr>
+                                <tr>
+                                    <td>2013</td>
+                                    <td>Rock in Rio V</td>
+                                    <td>Brasil Río de Janeiro</td>
+                                </tr>
+                                <tr>
+                                    <td>2014</td>
+                                    <td>Rock in Rio Lisboa VI</td>
+                                    <td>Portugal Lisboa</td>
+                                </tr>
+                                <tr>
+                                    <td>2015</td>
+                                    <td>Rock in Rio USA</td>
+                                    <td>Estados Unidos Las Vegas</td>
+                                </tr>
+                                <tr>
+                                    <td>2015</td>
+                                    <td>Rock in Rio VI</td>
+                                    <td>Brasil Río de Janeiro</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <footer class="colofon-ejercicio">
+                        <p>Los seudo selectores <code>nth-of-type()</code> o <code>nth-child()</code> son especialmente útiles a la hora de dar estilo a contenidos tabulares. De cara al usuario permiten identificar con claridad datos que se encuentran en la misma fila y por tanto están relacionados</p>
+                    </footer>
+                </article>
+                
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Estilos de texto</h1>
+                        <h3 class="subtitulo">Ejercicio 8</h3>
+                    </header>
+                    <div class="main" role="main">
+                        <p>Este párrafo tiene estilo normal</p>
+                        <p class="italic">Este párrafo tiene estilo italic</p>
+                        <p class="bold">Este párrafo tiene estilo bold</p>
+                        <p class="underline">Este párrafo tiene estilo underline</p>
+                        <p class="strikeThrough">Este párrafo tiene estilo strikeThrough</p>
+                        <p class="center">Este párrafo tiene estilo center</p>
+                        <p class="right">Este párrafo tiene estilo right</p>
+                        <p class="sans">Este párrafo tiene estilo sans</p>
+                        <p class="serif">Este párrafo tiene estilo serif</p>
+                        <p class="big">Este párrafo tiene estilo big</p>
+                        <p class="small">Este párrafo tiene estilo small</p>
+                        <p class="center underline">Este párrafo tiene estilo combinado de center y underline</p>
+                    </div>
+                    <footer class="colofon-ejercicio">
+                        <p>De nuevo, un ejemplo de la utilidad de separar la presentación del contenido, por medio del uso de clases utilitarias</p>
+                    </footer>
+                </article>
+                
+                
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Aplicación de estilos de texto</h1>
+                        <h3 class="subtitulo">Ejercicio 9</h3>
+                    </header>
+                    <div class="main" role="main">
+                        <p class="verdana italic bold">Texto escrito en vedana, cursiva y negrita</p>
+                        <p class="batang center bold underline">Texto escrito en batang, subrayado, negrita y centrado</p>
+                        <p class="garamond right">Texto escrito en garamond, alineado a la derecha</p>
+                        <p class="arial center strikeThrough">Texto escrito en arial</p>
+                        <p class="comic right italic">Texto escrito en comic sans ms</p>
+                        <p class="calibri big bold">Texto escrito en Calibri</p>
+                        <p class="georgia bold center">Texto escrito en Georgia</p>
+                    </div>
+                    <footer class="colofon-ejercicio">
+                        <p>Habiendo ya definido la mayoría de los estilos en el ejercicio anterior, este ejercicio se limitó a añadir las familias tipográficas requeridas para el ejercico</p>
+                    </footer>
+                </article>
+                
+                
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Box-Model</h1>
+                        <h3 class="subtitulo">Ejercicio 10</h3>
+                    </header>
+                    <div class="main" role="main">
+                        
+                        <div class="caja1">
+                            <p>Si quieres vivir una vida feliz, átala a una meta, no a una persona o a un objeto</p>
+                        </div>
+                        
+                        <div class="caja2">
+                            <p>Si quieres vivir una vida feliz, átala a una meta, no a una persona o a un objeto</p>
+                        </div>
+                        
+                        <div class="caja3">
+                            <p>Si quieres vivir una vida feliz, átala a una meta, no a una persona o a un objeto</p>
+                        </div>
+                        
+                    </div>
+                    <footer class="colofon-ejercicio">
+                        <p>Muy importante tener en cuenta a la hora de hacer una hoja de estilos, la definición del <code>box-sizing</code> para que haya consistencia en el diseño</p>
+                    </footer>
+                </article>
+                
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Box-Shadow</h1>
+                        <h3 class="subtitulo">Ejercicio 11</h3>
+                    </header>
+                    <div class="main" role="main">
+                        <p>La propiedad box shadow es útil para representar algo que flota sobre el documento proyectando una sombra debajo</p>
+                        <div class="box-model shadow1">
+                            <blockquote>El mejor médico es el que conoce la inutilidad de la mayor parte de las medicinas.</blockquote>
+                            <p>Benjamin Franklin</p>
+                        </div>
+                        <div class="box-model shadow2">
+                            <blockquote>Box shadow se puede usar también para simular una depresión</blockquote>
+                        </div>
+                        <div class="box-model shadow3">
+                            <blockquote>O para realizar bordes decorativos</blockquote>
+                        </div>
+                    </div>
+                    <footer class="colofon-ejercicio">
+                    </footer>
+                </article>
+                
+                <article>
+                    <header class="titulo-ejercicio">
+                        <h1 class="titulo">Modelo de caja</h1>
+                        <h3>Explicación</h3>
+                    </header>
+                    <div class="main" role="main">
+                        
+                        
+                    
+                    </div>
+                    <footer class="colofon-ejercicio">
+                    </footer>
+                </article>
+                
+               
             </div>
         </section>
 

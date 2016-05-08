@@ -125,6 +125,9 @@ img.alinear-derecha {
 }
 
 //Utilidades
+.responsive {
+    max-width: 100%;
+}
 .texto-derecha {
     text-align: right;
 }
@@ -216,7 +219,7 @@ table.zebra {
 
 //Secciones
 .cabeza {
-    background: rgba($claroMedio, 0.85);
+    background: rgba($claroMedio, 0.98);
     color: $claro;
     text-shadow: 0 1px 0 $oscuro;
     display: flex;
@@ -296,6 +299,9 @@ article {
 
 
 // form
+.center{
+    text-align: center;
+}
 form {
     background: rgba($frio, 0.12);
     padding: 5px;
@@ -306,7 +312,7 @@ legend, label {
 fieldset {
     margin-bottom: 1em;
 }
-input, select {
+input, select, textarea {
     padding: 0.5em;
     border-radius: 0.2em;
     border: 1px solid $frio;
@@ -316,14 +322,221 @@ input, select {
         height: 30px;
     }
 }
+.radio-label{
+    font-size: 0.8em;
+    font-weight: 600;
+}
 label {
     width: 150px;
     padding-right: 10px;
     text-align: right;
+    &.corta {
+        width: 80px;
+    }
+    &.media {
+        width: 110px;
+    }
 }
 .campo {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 1em auto;    
+    &.izquierda {
+        justify-content: flex-start;
+    }
+}
+//CSS
+pre { 
+    background: #444;
+    color: #AAA;
+    padding: 1em;
+    font-size: 90%; 
+}
+
+//Calendario
+.calendario {
+    font-size: 0.8em;
+    min-width: 288px;
+    background: #fff;
+    padding: 5px;
+}
+.dias-semana {
+    display: flex;
+    justify-content: flex-start;
+    li {
+        font-family: $mcLaren;
+        flex-basis: 14.28%;
+        border-right: 1px solid $frio;
+        border-top: 1px solid $frio;
+        border-bottom: 1px solid $frio;
+        text-align: center;
+        &:first-of-type{
+            border-left: 1px solid $frio;
+        }
+    }
+}
+.dias-mes {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    li {
+        flex-basis: 14.28%;
+        border-right: 1px solid $frio;
+        border-bottom: 1px solid $frio;
+        height: 60px;
+        text-align: right;
+        padding: 0 5px;
+        &.blank {
+            background: #efefef;
+        }
+        &:first-of-type{
+            border-left: 1px solid $frio;
+        }
+        &:nth-of-type(7n+1) {
+            border-left: 1px solid $frio;            
+        }
+        &:nth-of-type(7n), &.festivo {
+            background: #D5DDEA;
+            color: $frio;   
+            font-weight: 600;
+        }        
+    }
+}
+@media (max-width:500px){
+    .oculta-movil{
+        display: none;
+    }
+    .dias-mes li{
+       height: 30px;
+    }
+}
+
+//Tabla
+.tabla-zebra {
+    padding: 5px;
+    font-size: 0.9em;
+    width:100%;
+    background: #fff;
+    border:1px solid #f90;
+    border-collapse: collapse;
+    
+    thead{
+        tr {
+            th {
+                font-family: $mcLaren;
+                border:1px solid #f90;
+            }
+        }
+    }
+    tbody {
+        td {
+            padding: 5px;
+            border:1px solid #f90;
+        }
+        tr:nth-of-type(2n){
+            background: #F5E5CE;
+        } 
+    }
+}
+//parrafos
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.underline {
+    text-decoration: underline;
+}
+.strikeThrough {
+    text-decoration: line-through;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.sans {
+    font-family: sans-serif;
+}
+.serif {
+    font-family: serif;    
+}
+.big {
+    font-size: 2em;
+}
+.small {
+    font-size: 0.7em;
+}
+.verdana {
+    font-family: 'Verdana';
+}
+.batang {
+    font-family: 'Batang';
+}
+.garamond {
+    font-family: 'Garamond';
+}
+.arial {
+    font-family: 'Arial';
+}
+.comic {
+    font-family: 'Comic sans ms';
+}
+.calibri {
+    font-family: 'Calibri';
+}
+.georgia {
+    font-family: 'Georgia';
+}
+//Box-model 
+[class^="caja"]{
+    width: 30%;
+    display: inline-block;
+    margin-right: 3%;
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+.caja1 {
+    border:1px dashed red;
+    background:white;
+    border-radius:50%;
+    padding:35px;
+}
+.caja2 {
+    border:5px dotted #f90;
+    background:$claroMedio;
+    border-radius:2px;
+    padding:10px;
+}
+.caja3 {
+    border:10px solid $frio;
+    background:$oscuro;
+    border-radius:2px;
+    padding:15px;
+    color: $claro;
+}
+.box-model {
+    display: block;
+    width: 40%;
+    padding: 1em;
+    margin: 1em auto;
+    min-width: 280px;
+}
+.shadow1{
+    box-shadow: 1px 1px 10px 2px #333;
+}
+.shadow2 {
+    box-shadow: inset 1px 1px 10px 2px #333;
+}
+.shadow3 {
+    box-shadow: 0 0 0 3px $color3,
+                0 0 0 7px $color1,
+                0 0 0 10px $color2,
+                0 0 0 13px $color0,
+                0 0 0 17px $color4;
+    margin: 2em auto;
 }

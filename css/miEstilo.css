@@ -117,94 +117,98 @@ img.alinear-derecha {
   justify-content: center; }
 
 /* line 128, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.responsive {
+  max-width: 100%; }
+
+/* line 131, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .texto-derecha {
   text-align: right; }
 
-/* line 132, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 135, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .enunciado {
   color: #666;
   font-style: italic; }
 
-/* line 139, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 142, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .multicolor h2 {
   color: #D74F33; }
-  /* line 141, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 144, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .multicolor h2:nth-of-type(3n) {
     color: #C4AC30; }
-  /* line 144, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 147, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .multicolor h2:nth-of-type(2n) {
     color: #4B3E4D; }
-  /* line 147, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 150, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .multicolor h2:nth-of-type(4n+2) {
     color: fuchsia; }
 
-/* line 151, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 154, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .multicolor p {
   color: #D74F33; }
-  /* line 153, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 156, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .multicolor p:nth-of-type(3n+1) {
     text-align: justify;
     color: #1E8C93; }
-  /* line 157, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 160, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .multicolor p:nth-of-type(2n) {
     color: #000;
     text-align: right; }
 
-/* line 164, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 167, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 figure.centrada {
   width: 70%;
   max-width: 450px;
   margin: 10px auto; }
-  /* line 168, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 171, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   figure.centrada img {
     width: 100%; }
 
-/* line 172, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 175, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 figure.derecha {
   width: 70%;
   max-width: 450px;
   margin: 10px 0 10px auto; }
-  /* line 176, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 179, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   figure.derecha img {
     width: 100%; }
 
-/* line 180, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 183, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 figcaption {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 11px;
   line-height: 1.3; }
 
-/* line 187, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 190, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 table.zebra {
   width: 100%;
   border: 1px solid #4B3E4D;
   border-radius: 2px; }
-  /* line 192, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 195, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   table.zebra thead tr {
     background: #C4AC30 !important; }
-  /* line 195, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 198, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   table.zebra thead th {
     color: #4B3E4D;
     font-family: "McLaren", cursive;
     font-weight: lighter;
     border: 1px dotted #5e5217; }
-  /* line 202, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 205, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   table.zebra tbody {
     font-size: 80%; }
-  /* line 205, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 208, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   table.zebra tr {
     background: #dfcf7b; }
-    /* line 207, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    /* line 210, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
     table.zebra tr td {
       padding: 5px;
       border: 1px solid #C4AC30; }
-    /* line 211, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    /* line 214, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
     table.zebra tr:nth-of-type(2n) {
       background: #d5c052; }
 
-/* line 218, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 221, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .cabeza {
-  background: rgba(196, 172, 48, 0.85);
+  background: rgba(196, 172, 48, 0.98);
   color: #DBD8A2;
   text-shadow: 0 1px 0 #4B3E4D;
   display: flex;
@@ -215,7 +219,7 @@ table.zebra {
   box-shadow: 0 2px 0 #4B3E4D, 0 4px 0 #1E8C93, 0 6px 0 #DBD8A2, 0 8px 0 #C4AC30, 0 10px 0 #D74F33, 0 10px 2px #000;
   z-index: 100; }
 
-/* line 231, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 234, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .cuerpo {
   padding: 20px 0;
   margin-top: 70px;
@@ -224,7 +228,7 @@ table.zebra {
   line-height: 1.6;
   font-size: 16px; }
 
-/* line 240, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 243, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .pie {
   padding: 20px 0;
   font-family: "Source Sans Pro", sans-serif;
@@ -234,90 +238,314 @@ table.zebra {
   color: #DBD8A2;
   background: #444;
   box-shadow: 0 -2px 0 #D74F33, 0 -4px 0 #C4AC30, 0 -6px 0 #DBD8A2, 0 -8px 0 #1E8C93, 0 -10px 0 #4B3E4D; }
-  /* line 249, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 252, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .pie ul {
     color: #8f7892;
     display: flex;
     justify-content: flex-start; }
-    /* line 253, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    /* line 256, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
     .pie ul li {
       padding-right: 30px; }
-      /* line 255, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+      /* line 258, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
       .pie ul li:last-of-type {
         padding: 0; }
-      /* line 258, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+      /* line 261, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
       .pie ul li a {
         color: inherit; }
-        /* line 260, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+        /* line 263, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
         .pie ul li a:hover {
           color: #a694a9;
           text-shadow: 0 0 1px #DBD8A2; }
 
-/* line 269, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 272, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 article {
   border-bottom: 1px solid #D74F33;
   margin: 1em 0 2em; }
 
-/* line 273, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 276, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .colofon-ejercicio {
   font-size: 80%; }
 
-/* line 279, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 282, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 #canvas1 {
   background: #fff; }
 
-/* line 282, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 285, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 #canvas2 {
   background: #cfcfcf; }
 
-/* line 285, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 288, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 #canvas3 {
   background: #badbad; }
 
-/* line 288, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 291, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .canvas-container {
   width: 100%;
   min-width: 300px;
   height: 150px; }
-  /* line 292, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 295, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .canvas-container canvas {
     background: #bedbed; }
 
-/* line 299, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 302, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.center {
+  text-align: center; }
+
+/* line 305, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 form {
   background: rgba(30, 140, 147, 0.12);
   padding: 5px; }
 
-/* line 303, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 309, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 legend, label {
   font-size: 0.8em; }
 
-/* line 306, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 312, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 fieldset {
   margin-bottom: 1em; }
 
-/* line 309, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
-input, select {
+/* line 315, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+input, select, textarea {
   padding: 0.5em;
   border-radius: 0.2em;
   border: 1px solid #1E8C93;
   flex: 1; }
-  /* line 314, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
-  input[type="color"], select[type="color"] {
+  /* line 320, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  input[type="color"], select[type="color"], textarea[type="color"] {
     padding: 0;
     height: 30px; }
 
-/* line 319, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 325, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.radio-label {
+  font-size: 0.8em;
+  font-weight: 600; }
+
+/* line 329, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 label {
   width: 150px;
   padding-right: 10px;
   text-align: right; }
+  /* line 333, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  label.corta {
+    width: 80px; }
+  /* line 336, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  label.media {
+    width: 110px; }
 
-/* line 324, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 340, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .campo {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin: 1em auto; }
+  /* line 345, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .campo.izquierda {
+    justify-content: flex-start; }
+
+/* line 350, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+pre {
+  background: #444;
+  color: #AAA;
+  padding: 1em;
+  font-size: 90%; }
+
+/* line 358, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.calendario {
+  font-size: 0.8em;
+  min-width: 288px;
+  background: #fff;
+  padding: 5px; }
+
+/* line 364, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.dias-semana {
+  display: flex;
+  justify-content: flex-start; }
+  /* line 367, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .dias-semana li {
+    font-family: "McLaren", cursive;
+    flex-basis: 14.28%;
+    border-right: 1px solid #1E8C93;
+    border-top: 1px solid #1E8C93;
+    border-bottom: 1px solid #1E8C93;
+    text-align: center; }
+    /* line 374, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    .dias-semana li:first-of-type {
+      border-left: 1px solid #1E8C93; }
+
+/* line 379, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.dias-mes {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+  /* line 383, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .dias-mes li {
+    flex-basis: 14.28%;
+    border-right: 1px solid #1E8C93;
+    border-bottom: 1px solid #1E8C93;
+    height: 60px;
+    text-align: right;
+    padding: 0 5px; }
+    /* line 390, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    .dias-mes li.blank {
+      background: #efefef; }
+    /* line 393, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    .dias-mes li:first-of-type {
+      border-left: 1px solid #1E8C93; }
+    /* line 396, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    .dias-mes li:nth-of-type(7n+1) {
+      border-left: 1px solid #1E8C93; }
+    /* line 399, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+    .dias-mes li:nth-of-type(7n), .dias-mes li.festivo {
+      background: #D5DDEA;
+      color: #1E8C93;
+      font-weight: 600; }
+
+@media (max-width: 500px) {
+  /* line 407, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .oculta-movil {
+    display: none; }
+  /* line 410, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .dias-mes li {
+    height: 30px; } }
+
+/* line 416, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.tabla-zebra {
+  padding: 5px;
+  font-size: 0.9em;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #f90;
+  border-collapse: collapse; }
+  /* line 426, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .tabla-zebra thead tr th {
+    font-family: "McLaren", cursive;
+    border: 1px solid #f90; }
+  /* line 433, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .tabla-zebra tbody td {
+    padding: 5px;
+    border: 1px solid #f90; }
+  /* line 437, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  .tabla-zebra tbody tr:nth-of-type(2n) {
+    background: #F5E5CE; }
+
+/* line 443, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.italic {
+  font-style: italic; }
+
+/* line 446, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.bold {
+  font-weight: bold; }
+
+/* line 449, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.underline {
+  text-decoration: underline; }
+
+/* line 452, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.strikeThrough {
+  text-decoration: line-through; }
+
+/* line 455, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.center {
+  text-align: center; }
+
+/* line 458, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.right {
+  text-align: right; }
+
+/* line 461, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.sans {
+  font-family: sans-serif; }
+
+/* line 464, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.serif {
+  font-family: serif; }
+
+/* line 467, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.big {
+  font-size: 2em; }
+
+/* line 470, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.small {
+  font-size: 0.7em; }
+
+/* line 473, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.verdana {
+  font-family: 'Verdana'; }
+
+/* line 476, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.batang {
+  font-family: 'Batang'; }
+
+/* line 479, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.garamond {
+  font-family: 'Garamond'; }
+
+/* line 482, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.arial {
+  font-family: 'Arial'; }
+
+/* line 485, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.comic {
+  font-family: 'Comic sans ms'; }
+
+/* line 488, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.calibri {
+  font-family: 'Calibri'; }
+
+/* line 491, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.georgia {
+  font-family: 'Georgia'; }
+
+/* line 495, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+[class^="caja"] {
+  width: 30%;
+  display: inline-block;
+  margin-right: 3%; }
+  /* line 499, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  [class^="caja"]:last-of-type {
+    margin-right: 0; }
+
+/* line 503, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.caja1 {
+  border: 1px dashed red;
+  background: white;
+  border-radius: 50%;
+  padding: 35px; }
+
+/* line 509, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.caja2 {
+  border: 5px dotted #f90;
+  background: #C4AC30;
+  border-radius: 2px;
+  padding: 10px; }
+
+/* line 515, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.caja3 {
+  border: 10px solid #1E8C93;
+  background: #4B3E4D;
+  border-radius: 2px;
+  padding: 15px;
+  color: #DBD8A2; }
+
+/* line 522, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.box-model {
+  display: block;
+  width: 40%;
+  padding: 1em;
+  margin: 1em auto;
+  min-width: 280px; }
+
+/* line 529, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.shadow1 {
+  box-shadow: 1px 1px 10px 2px #333; }
+
+/* line 532, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.shadow2 {
+  box-shadow: inset 1px 1px 10px 2px #333; }
+
+/* line 535, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.shadow3 {
+  box-shadow: 0 0 0 3px #C4AC30, 0 0 0 7px #1E8C93, 0 0 0 10px #DBD8A2, 0 0 0 13px #4B3E4D, 0 0 0 17px #D74F33;
+  margin: 2em auto; }
 
 /*# sourceMappingURL=miEstilo.css.map */
