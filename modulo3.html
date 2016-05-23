@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jlixerkun Camargo">
+  <meta name="description" content="HTML5 UMB virtual - 2016-1">
+  <meta name="keywords" content="HTML5 CSS JavaScript">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Módulo 3 | HTML5 UMB virtual</title>
+
+  <link rel="stylesheet" href="css/miEstilo.css">
+</head>
+
+<body>
+  <div class="pagina">
+    <header class="cabeza">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h1 class="titulo-sitio"><a href="index.html">Ejercicios HTML5</a></h1>
+          <nav class="navegacion-principal">
+            <ul>
+              <li><a href="index.html">inicio</a></li>
+              <li><a href="hoja-de-vida.html">hoja de vida</a></li>
+              <li><a href="tabla.html">tablas</a></li>
+              <li><a href="enlaces.html">enlaces</a></li>
+              <li><a href="pagina2.html">módulo 2</a></li>
+              <li class="active"><a href="modulo3.html">módulo 3</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="cuerpo">
+      <div class="contenedor">
+        <hgroup>
+          <h1>Módulo 3</h1>
+          <h3>Javascript</h3>
+        </hgroup>
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 1</h1>
+              <h3 class="subtitulo">Operaciones Matemáticas</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>El estudioso debe crear un programa en JavaScript donde realice la suma, resta, multiplicación y división de dos números y mostrar en una ventana flotante.</p>
+            <pre>
+$('.ej1').click(function () {
+        
+        var num1 = parseInt(prompt('Ingrese un número')),
+            num2 = parseInt(prompt('Ingrese el 2o número'));
+        
+        alert('num 1 = ' + num1 + '\nnum 2 = ' + num2 + '\nnum1 + num2 = '+ (num1+num2) +'\nnum1 - num2 = '+(num1-num2) +'\nnum1 * num2 = '+(num1*num2)+'\nnum1 / num2 = '+(num1/num2)+'\nnum1 % num2 (módulo) = '+(num1%num2));
+    });                            
+                        </pre>
+            <a href="#" class="ej1 btn-mod3">Correr el ejercicio 1</a>
+
+          </div>
+
+        </article>
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 2</h1>
+              <h3 class="subtitulo">Arreglos - switch</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>El estudioso debe crear un programa en JavaScript con una matriz que tendrá como cadena de texto los 12 meses del año.
+              <br> -Debe mostrar por pantalla la ventana de alerta (flotante) con el resultado de la matriz (los 12 meses del año)
+              <br> -Basado en el mismo programa debe modificar el código y recuperar en la ventana de alerta (flotante) el mes de octubre.</p>
+            <pre>
+//Módulo 3 Ejercicio2
+    $('.ej2').click(function (e) {
+        var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        alert('Los meses del año son: \n'+ months);
+        
+        var mesBuscado = parseInt(prompt('Ingrese el mes que desea buscar (1-12)'));
+        switch (mesBuscado){
+            case 1:
+                alert( months[0])
+                break;
+            case 2:
+                alert( months[1])
+                break;
+            case 3:
+                alert( months[2])
+                break;
+            case 4:
+                alert( months[3])
+                break;
+            case 5:
+                alert( months[4])
+                break;
+            case 6:
+                alert( months[5])
+                break;
+            case 7:
+                alert( months[6])
+                break;
+            case 8:
+                alert( months[7])
+                break;
+            case 9:
+                alert( months[8])
+                break;
+            case 10:
+                alert( months[9])
+                break;
+            case 11:
+                alert( months[10])
+                break;
+            case 12:
+                alert( months[11])
+                break;
+            default:
+                alert('Ingrese un número entre 1 y 12');
+        }
+        e.preventDefault();
+    });                        
+                        </pre>
+            <a href="#" class="ej2 btn-mod3">Correr el ejercicio 2</a>
+          </div>
+        </article>
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 3</h1>
+              <h3 class="subtitulo">Toma de decisiones</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>El estudioso debe crear los siguientes programas utilizando JavaScript:</p>
+            <ol>
+              <li>
+                <p>Programa que permita calcular cual es el menor de dos números</p>
+                <pre>
+//Ejercicio 3.1
+    //Menor de dos números
+    $('.ej31').click(function(e){
+        var n1 = parseFloat(prompt('Ingrese número 1')),
+            n2 = parseFloat(prompt('Ingrese número 2'));
+        if(n1&lt;n2){
+            alert(n1 + ' es el menor');
+        } else {
+            alert(n2 + ' es el menor');
+        }
+        e.preventDefault();
+    });                                
+                                </pre>
+
+                <a href="#" class="ej31 btn-mod3">Correr el ejercicio 3.1</a>
+
+              </li>
+              <li>
+                <p>Programa que pida la edad de una persona si tiene más de 18 años envíe un mensaje que diga “eres mayor de edad” de lo contrario “eres menor de edad”</p>
+                <pre>
+$('.ej32').click(function(e){
+        
+        var edad = parseInt(prompt('Ingrese su edad'));
+        if(edad>=18){
+            alert('Eres mayor de edad');
+        } else {
+            alert('Eres menor de edad');            
+        }
+        e.preventDefault();
+    });</pre>
+                <a href="#" class="ej32 btn-mod3">Correr el ejercicio 3.2</a>
+              </li>
+              <li>
+                <p>Programa que pida por pantalla el nombre y la estatura de una persona.</p>
+                <ul>
+                  <li>Si la estatura de la persona es menor a 1.60 envié el mensaje “Eres una Persona de Baja Estatura”</li>
+                  <li>Si mide entre 1.61 y 1.75 envié el mensaje “Eres una Persona de Estatura Normal”</li>
+                  <li>Si su estatura es mayor a 1.75 envié el mensaje “Eres una Persona de Estatura Alta”</li>
+                </ul>
+                <pre>
+//Ejercicio 3.3
+    //Nombre y estatura
+
+    $('.ej33').click(function (e) {
+        var nombre = prompt('Ingresa tu nombre')
+            , estatura = parseFloat(prompt(nombre + ', ingresa tu estatura'));
+        if(estatura&lt;=1.6) {
+            alert(nombre + ', eres una persona de baja estatura');
+        } else if( estatura > 1.6 &amp;&amp; estatura &lt;= 1.750 ){
+            alert(nombre + ', eres una persona de estatura normal');
+        } else {
+            alert(nombre + ', eres una persona de estatura alta');            
+        }
+        e.preventDefault();
+    });</pre>
+
+                <a href="#" class="ej33 btn-mod3">Correr el ejercicio 3.3</a>
+              </li>
+              <li>
+                <p>El estudioso debe crear un programa que pida el nombre y apellido del estudiante, el programa debe analizar y tomar la siguiente decisión:</p>
+                <ul>
+                  <li>Si la nota es igual a 5 debe salir un mensaje que diga “Su Valoración es Excelente” </li>
+                  <li>Si la nota es mayor a 4 debe salir un mensaje que diga “Su Valoración es Sobresaliente”</li>
+                  <li>Si la nota es mayor o igual a 3 debe salir un mensaje que diga “Su Valoración es Aceptable”</li>
+                  <li>Si la nota es menor a 3 debe salir un mensaje que diga “Perdió la Materia”.</li>
+                </ul>
+
+                <pre>
+//Ejercicio 3.4
+    //Nombre y nota
+    $('.ej34').click(function (e) {
+        var nombre = prompt('Ingresa tu nombre')
+            , apellido = prompt('Ingresa tu apellido')
+            , nota = parseFloat(prompt(nombre + ' ' + apellido + ' ingresa tu nota'));
+        if (nota &lt; 3 &amp;&amp; nota >= 0) {
+            alert(nombre + ' ' + apellido + ', perdiste la materia');
+        } else if (nota >= 3 &amp;&amp; nota &lt; 4) {
+            alert(nombre + ' ' + apellido + ', tu valoración es aceptable');
+        } else if (nota >= 4 &amp;&amp; nota &lt; 5) {
+            alert(nombre + ' ' + apellido + ', tu valoración es sobresaliente');
+        } else if (nota == 5) {
+            alert(nombre + ' ' + apellido + ', tu valoración es excelente');
+        } else {
+            alert(nombre + ' ' + apellido + ', por favor ingresa una calificación válida')
+        }
+        e.preventDefault();
+    });</pre>
+
+                <a href="#" class="ej34 btn-mod3">Correr el ejercicio 3.4</a>
+              </li>
+            </ol>
+          </div>
+        </article>
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 4</h1>
+              <h3 class="subtitulo">Descuentos</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>La Empresa CINE-CAPITAL realiza en la semana descuentos para sus clientes, dependiendo el día, el cliente tiene un descuento especial en el valor de su entrada. El estudioso debe realizar un programa que diga al usuario el valor del descuento teniendo en cuenta que:</p>
+            <ul>
+              <li>El programa debe pedir por pantalla un número de 1 a 7 que corresponde al día de la semana (1=Lunes, 2=Martes, 3-Miercoles…..)</li>
+              <li>De acuerdo al día el programa debe decir el descuento (Lunes=10%, Martes=30%, Miércoles=50%, Jueves=20%, viernes, sábado y domingo NO tienen descuento)</li>
+            </ul>
+            <p>En el centro comercial realizan descuentos de acuerdo a cada mes del año, el estudioso debe realizar un programa que diga al usuario el valor del descuento teniendo en cuenta que:</p>
+            <ul>
+              <li>El programa debe pedir por pantalla un número de 1 a 12 que corresponde a cada mes del año (1=Enero, 2=Febrero, 3-Marzo…..)</li>
+              <li>De acuerdo al mes el programa debe decir el descuento (Enero=40%, Febrero=50%, Marzo=40%, Abril=30%, Mayo=20%, Julio=10%, Agosto= 30, Septiembre =35%, Octubre= 50% Noviembre=20%, Junio y Diciembre NO tienen descuento)</li>
+            </ul>
+            <pre>
+//Ejercicio 4
+  //Descuentos
+  $('.ej4').click(function (e) {
+    var diaSemana
+      , mesAno
+      , descuento
+      , descuentoCC;
+    switch (new Date().getDay()) {
+    case 0:
+      diaSemana = "Domingo";
+      descuento = 0;
+      break;
+    case 1:
+      diaSemana = "Lunes";
+      descuento = 0.1;
+      break;
+    case 2:
+      diaSemana = "Martes";
+      descuento = 0.3;
+      break;
+    case 3:
+      diaSemana = "Miércoles";
+      descuento = 0.5;
+      break;
+    case 4:
+      diaSemana = "Jueves";
+      descuento = 0.2;
+      break;
+    case 5:
+      diaSemana = "Viernes";
+      descuento = 0;
+      break;
+    case 6:
+      diaSemana = "Sábado";
+      descuento = 0;
+      break;
+    };
+    switch (new Date().getMonth()) {
+    case 0:
+      mesAno = "Enero";
+      descuentoCC = 0.4;
+      break;
+    case 1:
+      mesAno = "Febrero";
+      descuentoCC = 0.5;
+      break;
+    case 2:
+      mesAno = "Marzo";
+      descuentoCC = 0.4;
+      break;
+    case 3:
+      mesAno = "Abril";
+      descuentoCC = 0.3;
+      break;
+    case 4:
+      mesAno = "Mayo";
+      descuentoCC = 0.2;
+      break;
+    case 5:
+      mesAno = "Junio";
+      descuentoCC = 0;
+      break;
+    case 6:
+      mesAno = "Julio";
+      descuentoCC = 0.1;
+      break;
+    case 7:
+      mesAno = "Agosto";
+      descuentoCC = 0.3;
+      break;
+    case 8:
+      mesAno = "Septiembre";
+      descuentoCC = 0.35;
+      break;
+    case 9:
+      mesAno = "Octubre";
+      descuentoCC = 0.5;
+      break;
+    case 10:
+      mesAno = "Noviembre";
+      descuentoCC = 0.2;
+      break;
+    case 11:
+      mesAno = "Diciembre";
+      descuentoCC = 0;
+      break;
+    };
+
+    alert(diaSemana + ' Descuento en cineCapital: ' + descuento*100 + '%\n'+ mesAno + ' descuento en Centro Comercial:' + descuentoCC*100 + '%');
+    e.preventDefault();
+  });</pre>
+            <a href="#" class="ej4 btn-mod3">Correr el ejercicio 4</a>
+          </div>
+        </article>
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 5</h1>
+              <h3 class="subtitulo">Bucles</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>Crear un programa en JavaScript que permita mediante un bucle mostrar por pantalla los números pares del 0 al 50</p>
+            <pre>
+//Ejercicio 5.1
+  //Numeros pares hasta 50
+  $('.ej51').click(function (e) {
+    var numeroTope = parseInt(prompt('Ingrese un número tope', '50'))
+      , texto = '';
+    for (i = 0; i &lt;= numeroTope; i += 2) {
+      texto = texto + '' + i + ' ';
+    }
+    alert(texto);
+    e.preventDefault();
+  });</pre>
+            <a href="#" class="ej51 btn-mod3">Correr el ejercicio 5.1</a>
+            <hr />
+            <p>Crear un programa en JavaScript que permita mediante un bucle mostrar por pantalla los números impares del 1 al 49</p>
+            <pre>
+//Ejercicio 5.2
+  //Numeros impares hasta 49
+  $('.ej52').click(function (e) {
+    var numeroTope = parseInt(prompt('Ingrese un número tope', '50'))
+      , texto = '';
+    for (i = 1; i &lt;= numeroTope; i += 2) {
+      texto = texto + '' + i + ' ';
+    }
+    alert(texto);
+    e.preventDefault();
+  });</pre>
+            <a href="#" class="ej52 btn-mod3">Correr el ejercicio 5.2</a>
+            <hr />
+            <p>Crea un programa en JavaScript que solicite al usuario un número y muestre la tabla de multiplicar del número introducido.</p>
+            <pre>
+//Ejercicio 5.3
+  //Tabla de multipllicar
+  $('.ej53').click(function (e) {
+    var numero = parseInt(prompt('Ingrese número a multiplicar','7'));
+    var container = $('.tabla-mult tbody');
+    $('.desarrollo-ej53').fadeIn(200);
+    container.html('');
+    for(i=1;i&lt;=12;i++){
+      container.append('&lt;tr&gt;&lt;td&gt;'+ numero +'&lt;/td&gt;&lt;td&gt;'+ i +'&lt;/td&gt;&lt;td&gt;'+ numero * i +'&lt;/td&gt;&lt;/tr&gt;');
+    }
+    e.preventDefault();
+  });</pre>
+            <a href="#" class="ej53 btn-mod3">Correr el ejercicio 5.3</a>
+            <div class="desarrollo-ej53">
+              <table class="tabla-mult">
+                <thead>
+                  <tr>
+                    <th>Multiplicando</th>
+                    <th>Multiplicador</th>
+                    <th>Resultado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            <hr />
+            <p>Una persona invierte en una cuenta de ahorros en un banco $1000.000 con un 6% de intereses anual, realice un programa que calcule el monto acumulado de la cuenta en un periodo de 5 años.</p>
+            <pre>
+//Ejercicio 5.4
+//Acumulado por interés 
+$('.ej54').click(function (e) {
+    var inversion = parseInt(prompt('Ingrese monto de inversión inicial en pesos', '1000000'))
+      , periodo = parseInt(prompt('Ingrese término del ahorro en años', '5'))
+      , interes = parseFloat(prompt('Ingrese interés anual en unidades porcentuales', '6.0'))
+      , acumulado = inversion;
+
+    for (i = 1; i &lt;= periodo; i++) {
+      acumulado += inversion * (interes / 100);
+    }
+    alert('Al cabo de ' + periodo + ' años, El acumulado es $' + acumulado);
+    e.preventDefault();
+  });</pre>
+            <a href="#" class="ej54 btn-mod3">Correr el ejercicio 5.4</a>
+          </div>
+        </article>
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 6</h1>
+              <h3 class="subtitulo">Tutores S.A.</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>La empresa Tutores S.A necesita realizar un programa que pida el número de años que un trabajador ha estado en la empresa, el objetivo del programa es calcular un porcentaje de acuerdo al número de años para recibir un bono. El estudioso debe realizar el programa teniendo en cuenta que:</p>
+            <ul>
+              <li>
+                Si el empleado lleva 1 año no tiene bono
+              </li>
+              <li>
+                Si el empleado lleva 2 años tendrá un bono de $100.000,
+              </li>
+              <li>
+                Si el empleado lleva 3 años tendrá un bono de $200.000.
+              </li>
+              <li>
+                Si el empleado lleva 4 años tendrá un bono de $500.000
+              </li>
+              <li>
+                Si el empleado lleva 5 años o más tendrá un bono de $700.000
+              </li>
+            </ul>
+            <pre>
+//Ejercicio 6
+  //Tutores SA 
+  $('.ej6').click(function (e) {
+    var antiguedad = parseInt(prompt('Ingrese años de antigüedad', '1'));
+    if(antiguedad &lt; 2) {
+      alert ('No tiene bono');
+    } else if( antiguedad >= 2 &amp;&amp; antiguedad &lt;3) {
+      alert ('Tiene bono de $100.000');      
+    } else if ( antiguedad >= 3 &amp;&amp; antiguedad &lt;4) {
+      alert ('Tiene bono de $200.000');      
+    } else if ( antiguedad >= 4 &amp;&amp; antiguedad &lt;5) {
+      alert ('Tiene bono de $500.000');      
+    } else if ( antiguedad >=5) {
+      alert ('Tiene bono de $700.000');      
+    }
+    e.preventDefault();
+  });</pre>
+            <a href="#" class="ej6 btn-mod3">Correr el ejercicio 6</a>
+            
+
+          </div>
+        </article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </section>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <nav class="navegacion-secundaria">
+          <ul>
+            <li><a href="https://github.com/jlixerkun/sitioUMB" target="_blank">Fork en GitHub</a></li>
+            <li><a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank">I &lt;3 flexbox</a></li>
+            <li><a href="https://www.google.com/fonts/" target="_blank">I &lt;3 typography</a></li>
+            <li><a href="http://sass-lang.com/" target="_blank">I &lt;3 SASS</a></li>
+            <li><a href="http://www.colourlovers.com/palette/1416141/Naked_Palette" target="_blank">I &lt;3 Color</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="js/jquery-1.12.3.min.js"></script>
+  <script src="js/scriptsMod3.js"></script>
+</body>
+
+</html>
