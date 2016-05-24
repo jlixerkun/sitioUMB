@@ -279,19 +279,100 @@ $(document).ready(function () {
   //Tutores S.A.
   $('.ej6').click(function (e) {
     var antiguedad = parseInt(prompt('Ingrese años de antigüedad', '1'));
-    if(antiguedad < 2) {
-      alert ('No tiene bono');
-    } else if( antiguedad >= 2 && antiguedad <3) {
-      alert ('Tiene bono de $100.000');      
-    } else if ( antiguedad >= 3 && antiguedad <4) {
-      alert ('Tiene bono de $200.000');      
-    } else if ( antiguedad >= 4 && antiguedad <5) {
-      alert ('Tiene bono de $500.000');      
-    } else if ( antiguedad >=5) {
-      alert ('Tiene bono de $700.000');      
+    if (antiguedad < 2) {
+      alert('No tiene bono');
+    } else if (antiguedad >= 2 && antiguedad < 3) {
+      alert('Tiene bono de $100.000');
+    } else if (antiguedad >= 3 && antiguedad < 4) {
+      alert('Tiene bono de $200.000');
+    } else if (antiguedad >= 4 && antiguedad < 5) {
+      alert('Tiene bono de $500.000');
+    } else if (antiguedad >= 5) {
+      alert('Tiene bono de $700.000');
     }
     e.preventDefault();
   });
+
+  //Ejercicio 71
+  //Do While
+  $('.ej71').click(function (e) {
+    var numTope = parseInt(prompt('Ingrese el tope', '50'))
+      , i = 0
+      , text = '';
+    do {
+      text += i + ' ';
+      i += 2;
+    }
+    while (i <= numTope);
+    alert(text);
+    e.preventDefault();
+  });
+
+  //Ejercicio 72
+  //Do While - Impares
+  $('.ej72').click(function (e) {
+    var numTope = parseInt(prompt('Ingrese el tope', '50'))
+      , i = 1
+      , text = ''
+      , container = $('.noShow.ej72');
+    container.html('');
+    container.append('<h4>Los números impares hasta el ' + numTope + '</h4>');
+    do {
+      container.append('<span class="numImpar">' + i + '</span>');
+      i += 2;
+    }
+    while (i <= numTope);
+    e.preventDefault();
+  });
+
+  //Ejercicio 7.3
+  //Do while tabla multiplicar
+  $('.ej73').click(function (e) {
+    var multiplicando = parseInt(prompt('Ingrese el número', '7'))
+      , i = 1
+      , text = ''
+      , container = $('.noShow.ej73');
+    container.html('');
+    container.append('<table class="tabla-mult"><thead><tr><th>Multiplicando</th><th>Multiplicador</th><th>Resultado</th></tr></thead><tbody></tbody></table>');
+    do {
+      container.find('.tabla-mult').append('<tr><td>' + multiplicando + '</td><td>' + i + '</td><td>' + (i * multiplicando) + '</td></tr>');
+      i += 1;
+    }
+    while (i <= 12);
+    e.preventDefault();
+  });
+
+
+  //Ejercicio 8
+  //
+  $('.ej8').click(function (e) {
+    /*La siguiente línea contiene un error, ya que el metodo prompt
+    retorna un string, la función retornará un error, ya que los
+    strings no pueden someterse a operaciones matemáticas. 
+    Hay que hacer type casting a integer*/
+
+    //var numero = prompt('Introduce un número entero');//error de tipo de dato
+    var numero = parseInt(prompt('Introduce un número entero'));
+
+
+    //Esta línea ejecuta la función parImpar pasando el valor de la variable numero como parámetro
+    var resultado = parImpar(numero);
+    
+    //Esta línea muestra el resultado de la ejecución en una ventana flotante
+    alert('El número ' + numero + ' es ' + resultado);
+
+    /*Aquí se define la función parImpar, que toma un parámetro 
+    y hace la verificación de si es o no par */
+    function parImpar(numero) {
+      if (numero % 2 == 0) {  // Lasentencia if(...) es el inicio de
+        return 'par';         // una estructura de control
+      } else {
+        return 'impar';
+      }
+    }
+    e.preventDefault();
+  })
+
 
 
 })

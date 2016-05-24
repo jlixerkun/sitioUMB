@@ -592,21 +592,35 @@ pre {
 .desarrollo-ej53 {
   display: none;
   width: 300px;
-  margin: 1em auto; }
+  margin: 1em auto;
+  text-align: center; }
 
-/* line 628, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+/* line 629, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
 .tabla-mult {
   border: 1px solid #4B3E4D;
   border-collapse: collapse;
   font-size: 10px;
-  background: #fff; }
-  /* line 634, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  background: #fff;
+  width: 100%; }
+  /* line 636, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .tabla-mult tr:nth-of-type(2n) {
     background: #ddd; }
-  /* line 638, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+  /* line 640, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
   .tabla-mult td {
     padding: 5px;
     border: 1px solid #4B3E4D;
     text-align: center; }
+
+/* line 648, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.noShow.ej73 {
+  width: 300px;
+  margin: 1em auto;
+  text-align: center; }
+
+/* line 653, C:/xampp/htdocs/sitioUMB/css/miEstilo.scss */
+.noShow span {
+  margin-right: 10px;
+  padding: 5px;
+  display: inline-block; }
 
 /*# sourceMappingURL=miEstilo.css.map */

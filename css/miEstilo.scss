@@ -623,6 +623,7 @@ pre {
   display: none;
   width: 300px;
   margin: 1em auto;
+  text-align:center;
 }
 
 .tabla-mult {
@@ -630,6 +631,7 @@ pre {
   border-collapse: collapse;
   font-size: 10px;
   background: #fff;
+  width: 100%;
   tr {
     &:nth-of-type(2n) {
       background: #ddd;
@@ -639,5 +641,18 @@ pre {
     padding: 5px;
     border: 1px solid $oscuro;
     text-align: center;
+  }
+}
+
+.noShow {
+  &.ej73 {
+    width: 300px;
+    margin: 1em auto;
+    text-align:center;
+  }
+  span {
+    margin-right: 10px;
+    padding: 5px;
+    display: inline-block;
   }
 }

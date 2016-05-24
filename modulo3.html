@@ -481,8 +481,118 @@ $('.ej54').click(function (e) {
     e.preventDefault();
   });</pre>
             <a href="#" class="ej6 btn-mod3">Correr el ejercicio 6</a>
-            
+          </div>
+        </article>
 
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 7</h1>
+              <h3 class="subtitulo">Do while</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <ol start="71">
+              <li>
+                <p>Crear un programa en JavaScript que permita mediante do-while mostrar por pantalla los números pares del 0 al 50</p>
+                <pre>
+//Ejercicio 71
+  //Do While
+  $('.ej71').click(function (e) {
+    var numTope = parseInt(prompt('Ingrese el tope', '50'))
+      , i = 0
+      , text = '';
+    do {
+      text += i + ' ';
+      i += 2;
+    }
+    while (i &lt;= numTope);
+    alert(text);
+    e.preventDefault();
+  });</pre>
+                <a href="#" class="ej71 btn-mod3">Correr el ejercicio 7.1</a>
+              </li>
+
+
+              <li>
+                <p>Crear un programa en JavaScript que permita mediante do-while mostrar por pantalla los números impares del 1 al 49</p>
+                <pre>
+//Ejercicio 72
+  //Do While - Impares
+  $('.ej72').click(function (e) {
+    var numTope = parseInt(prompt('Ingrese el tope', '50'))
+      , i = 1
+      , text = ''
+      , container = $('.noShow.72');
+    container.html('');
+    container.append('&lt;h4>Los números impares hasta el '+ numTope +'&lt;/h4>');
+    do {
+      container.append('&lt;span class="numImpar">' + i + '&lt;/span>');
+      i += 2;
+    }
+    while (i &lt;= numTope);
+    e.preventDefault();
+  });</pre>
+                <a href="#" class="ej72 btn-mod3">Correr el ejercicio 7.2</a>
+                <div class="noShow ej72">
+                </div>
+              </li>
+
+
+
+              <li>
+                <p>Crea un programa en JavaScript que solicite al usuario un número y muestre la tabla de multiplicar del número introducido.</p>
+                <pre>
+  //Ejercicio 7.3
+  //Do while tabla multiplicar
+  $('.ej73').click(function (e) {
+    var multiplicando = parseInt(prompt('Ingrese el número', '7'))
+      , i = 1
+      , text = ''
+      , container = $('.noShow.ej73');
+    container.html('');
+    container.append('&lt;table class="tabla-mult">&lt;thead>&lt;tr>&lt;th>Multiplicando&lt;/th>&lt;th>Multiplicador&lt;/th>&lt;th>Resultado&lt;/th>&lt;/tr>&lt;/thead>&lt;tbody>&lt;/tbody>&lt;/table>');
+    do {
+      container.find('.tabla-mult').append('&lt;tr>&lt;td>'+ multiplicando + '&lt;/td>&lt;td>' + i + '&lt;/td>&lt;td>'+ (i*multiplicando) +'&lt;/td>&lt;/tr>');
+      i += 1;
+    }
+    while (i &lt;= 12);
+    e.preventDefault();
+  });
+</pre>
+                <a href="#" class="ej73 btn-mod3">Correr el ejercicio 7.3</a>
+                <div class="noShow ej73"></div>
+              </li>
+
+
+
+            </ol>
+          </div>
+        </article>
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 8</h1>
+              <h3 class="subtitulo">Análisis de un programa</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>
+              A continuación encontrará un programa en JavaScript, el estudioso debe:
+            </p>
+            <ol>
+              <li>Reescribir el programa en un editor de texto</li>
+              <li>Analizar el programa, en el caso que el programa tenga errores el estudioso deberá corregirlos</li>
+              <li>Analizar la ejecución del programa.</li>
+              <li>Identificar la función Analizar las estructuras de control que hay Por medio de comentarios escribir el desarrollo del programa línea a línea.</li>
+            </ol>
+            <figure class="centrada">
+              <img src="img/ej8.png" alt="ejercicio 8">
+              <figcaption>Ejercicio 8</figcaption>
+            </figure>
+            
           </div>
         </article>
 
