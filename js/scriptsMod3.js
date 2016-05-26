@@ -346,26 +346,31 @@ $(document).ready(function () {
   //Ejercicio 8
   //
   $('.ej8').click(function (e) {
-    /*La siguiente línea contiene un error, ya que el metodo prompt
-    retorna un string, la función retornará un error, ya que los
-    strings no pueden someterse a operaciones matemáticas. 
-    Hay que hacer type casting a integer*/
+    /*La siguiente línea contiene un error, 
+    ya que el metodo prompt retorna un string, 
+    la función retornará un error, ya que los
+    strings no pueden someterse a operaciones 
+    matemáticas. Hay que hacer type casting a 
+    integer*/
 
-    //var numero = prompt('Introduce un número entero');//error de tipo de dato
+    //var numero = prompt('Introduce un número entero');
+    //error de tipo de dato
     var numero = parseInt(prompt('Introduce un número entero'));
 
 
-    //Esta línea ejecuta la función parImpar pasando el valor de la variable numero como parámetro
+    //Esta línea ejecuta la función parImpar 
+    //pasando el valor de la variable numero como parámetro
     var resultado = parImpar(numero);
-    
-    //Esta línea muestra el resultado de la ejecución en una ventana flotante
+
+    //Esta línea muestra el resultado de la 
+    //ejecución en una ventana flotante
     alert('El número ' + numero + ' es ' + resultado);
 
     /*Aquí se define la función parImpar, que toma un parámetro 
     y hace la verificación de si es o no par */
     function parImpar(numero) {
-      if (numero % 2 == 0) {  // Lasentencia if(...) es el inicio de
-        return 'par';         // una estructura de control
+      if (numero % 2 == 0) { // Lasentencia if(...) es el inicio de
+        return 'par'; // una estructura de control
       } else {
         return 'impar';
       }

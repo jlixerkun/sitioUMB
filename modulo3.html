@@ -589,10 +589,104 @@ $('.ej54').click(function (e) {
               <li>Identificar la función Analizar las estructuras de control que hay Por medio de comentarios escribir el desarrollo del programa línea a línea.</li>
             </ol>
             <figure class="centrada">
-              <img src="img/ej8.png" alt="ejercicio 8">
+              <img src="img/ej8.png" alt="ejercicio 8" />
               <figcaption>Ejercicio 8</figcaption>
             </figure>
-            
+            <!-- <pre>
+  //Ejercicio 8
+  //
+  $('.ej8').click(function (e) {
+    /*La siguiente línea contiene un error, 
+    ya que el metodo prompt retorna un string, 
+    la función retornará un error, ya que los
+    strings no pueden someterse a operaciones 
+    matemáticas. Hay que hacer type casting a 
+    integer*/
+
+    //var numero = prompt('Introduce un número entero');
+    //error de tipo de dato
+    var numero = parseInt(prompt('Introduce un número entero'));
+
+
+    //Esta línea ejecuta la función parImpar 
+    //pasando el valor de la variable numero como parámetro
+    var resultado = parImpar(numero);
+
+    //Esta línea muestra el resultado de la 
+    //ejecución en una ventana flotante
+    alert('El número ' + numero + ' es ' + resultado);
+
+    /*Aquí se define la función parImpar, que toma un parámetro 
+    y hace la verificación de si es o no par */
+    function parImpar(numero) {
+      if (numero % 2 == 0) { // Lasentencia if(...) es el inicio de
+        return 'par'; // una estructura de control
+      } else {
+        return 'impar';
+      }
+    }
+    e.preventDefault();
+  })</pre> -->
+            <figure class="centrada">
+              <img src="img/Ej8R.png" alt="Respuesta ejercicio 8" />
+              <figcaption>Respuesta ejercicio 8</figcaption>
+            </figure>
+
+            <a href="#" class="ej8 btn-mod3">Correr el ejercicio 8</a>
+
+          </div>
+        </article>
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 9</h1>
+              <h3 class="subtitulo">Análisis de un programa</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>A continuación encontrará un programa en JavaScript, El estudioso debe:</p>
+            <ol>
+              <li>Reescribir el programa en un editor de texto</li>
+              <li>Analizar el programa, en el caso que el programa tenga errores el estudioso deberá corregirlos</li>
+              <li>Analizar la ejecución del programa.</li>
+              <li>Identificar la función</li>
+              <li>Analizar las estructuras de control que hay</li>
+              <li>Por medio de comentarios escribir el desarrollo del programa línea a línea.</li>
+            </ol>
+            <figure>
+              <img src="img/ej9.png" alt="Ejercicio 9" />
+              <figcaption>Ejercicio 9</figcaption>
+            </figure>
+
+            <script type="text/javascript">
+              function calcula(total) {
+                total.resul.value = eval(total.expr.value)
+              }
+            </script>
+
+
+
+            <div class="calc">
+              <h1>Calculadora de la UMB</h1>
+              <p>Introduce una expresión a calcular
+                <br />del estilo: 4*3
+                <br />o del estilo: (4*3)/(3*2)</p>
+              <p>Luego pulsa calcular</p>
+              <form name="calculadora">
+                <h2>Expresión</h2>
+                <input type="text" name="expr">
+                <h2>Resultado</h2>
+                <input type="text" name="resul">
+
+                <input type="button" onClick="calcula(this.form);" value="Calcular">
+
+              </form>
+
+
+
+            </div>
+
           </div>
         </article>
 
