@@ -15,9 +15,11 @@ $(document).ready(function () {
   //Módulo 3 Ejercicio2
   $('.ej2').click(function (e) {
     var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    
     alert('Los meses del año son: \n' + months);
 
     var mesBuscado = parseInt(prompt('Ingrese el mes que desea buscar (1-12)'));
+    
     switch (mesBuscado) {
     case 1:
       alert(months[0]);
@@ -67,11 +69,13 @@ $(document).ready(function () {
   $('.ej31').click(function (e) {
     var n1 = parseFloat(prompt('Ingrese número 1'))
       , n2 = parseFloat(prompt('Ingrese número 2'));
+    
     if (n1 < n2) {
       alert(n1 + ' es el menor');
     } else {
       alert(n2 + ' es el menor');
     }
+    
     e.preventDefault();
   });
 
@@ -81,11 +85,13 @@ $(document).ready(function () {
   $('.ej32').click(function (e) {
 
     var edad = parseInt(prompt('Ingrese su edad'));
+    
     if (edad >= 18) {
       alert('Eres mayor de edad');
     } else {
       alert('Eres menor de edad');
     }
+    
     e.preventDefault();
   });
 
@@ -95,6 +101,7 @@ $(document).ready(function () {
   $('.ej33').click(function (e) {
     var nombre = prompt('Ingresa tu nombre')
       , estatura = parseFloat(prompt(nombre + ', ingresa tu estatura'));
+    
     if (estatura <= 1.6) {
       alert(nombre + ', eres una persona de baja estatura');
     } else if (estatura > 1.6 && estatura <= 1.750) {
@@ -102,6 +109,7 @@ $(document).ready(function () {
     } else {
       alert(nombre + ', eres una persona de estatura alta');
     }
+    
     e.preventDefault();
   });
 
@@ -123,6 +131,7 @@ $(document).ready(function () {
     } else {
       alert(nombre + ' ' + apellido + ', por favor ingresa una calificación válida')
     }
+    
     e.preventDefault();
   });
 
@@ -215,7 +224,7 @@ $(document).ready(function () {
       break;
     };
 
-    alert(diaSemana + ' Descuento en cineCapital: ' + descuento * 100 + '%\n' + mesAno + ' descuento en Centro Comercial:' + descuentoCC * 100 + '%');
+    alert(diaSemana + ' Descuento en cineCapital: ' + descuento * 100 + '%\n' + mesAno + ' descuento en Centro Comercial: ' + descuentoCC * 100 + '%');
     e.preventDefault();
   });
 
@@ -225,7 +234,7 @@ $(document).ready(function () {
     var numeroTope = parseInt(prompt('Ingrese un número tope', '50'))
       , texto = '';
     for (i = 0; i <= numeroTope; i += 2) {
-      texto = texto + '' + i + ' ';
+      texto = texto + i + ' ';
     }
     alert(texto);
     e.preventDefault();
@@ -237,24 +246,31 @@ $(document).ready(function () {
   $('.ej52').click(function (e) {
     var numeroTope = parseInt(prompt('Ingrese un número tope', '50'))
       , texto = '';
+    
     for (i = 1; i <= numeroTope; i += 2) {
-      texto = texto + '' + i + ' ';
+      texto = texto + i + ' ';
     }
+    
     alert(texto);
     e.preventDefault();
   });
 
 
   //Ejercicio 5.3
-  //Tabla de multipllicar
+  //Tabla de multiplicar
   $('.ej53').click(function (e) {
     var numero = parseInt(prompt('Ingrese número a multiplicar', '7'));
+    
     var container = $('.tabla-mult tbody');
-    $('.desarrollo-ej53').fadeIn(200);
+    
+    $('.desarrollo-ej53').fadeIn(400);
+    
     container.html('');
+    
     for (i = 1; i <= 12; i++) {
       container.append('<tr><td>' + numero + '</td><td>' + i + '</td><td>' + numero * i + '</td></tr>');
     }
+    
     e.preventDefault();
   });
 
@@ -368,16 +384,138 @@ $(document).ready(function () {
 
     /*Aquí se define la función parImpar, que toma un parámetro 
     y hace la verificación de si es o no par */
-    function parImpar(numero) {
-      if (numero % 2 == 0) { // Lasentencia if(...) es el inicio de
-        return 'par'; // una estructura de control
-      } else {
-        return 'impar';
-      }
+    e.preventDefault();
+  });
+
+
+
+
+  var contador = 0;
+
+
+  $('.ej11').click(function (e) {
+    if (parImpar(contador) == 'par') {
+      alert(info("OVNI = OBJETO VOLADOR NO IDENTIFICADO"));
+    } else if (contador % 3 == 0) {
+      alert(info("En un lugar de la mancha..."));
+    } else {
+      alert(info(prompt('Escriba una frase para verificar')));
+    }
+
+    contador += 1;
+
+    e.preventDefault();
+  });
+
+
+
+  $('.ej12').click(function (e) {
+    var palabra = prompt('Ingrese una palabra o frase palíndroma');
+    if (palindromo(palabra)) {
+      alert('La cadena "' + palabra + '" ES PALINDROMA');
+    } else {
+      alert('La cadena "' + palabra + '" NO es palíndroma, intente de nuevo');
     }
     e.preventDefault();
-  })
+  });
+
+
+  //(nombre, peso, estatura, sexo, edad)
+  $('.ej13').click(function (e) {
+    var persona = {
+      nombre: 'Jlixerkun'
+      , peso: 85
+      , estatura: 1.70
+      , sexo: 'masculino'
+      , edad: 35
+    }
+    persona.edad = 36;
+    
+    alerta();
+
+    function alerta() {
+      alert('La persona se llama ' + persona.nombre + '\npeso: ' + persona.peso + ' kg.\nestatura: ' + persona.estatura + ' metros\nsexo: ' + persona.sexo + '\nedad: ' + persona.edad + ' años');
+    }
+
+//    persona.nombre = prompt('Escriba el nuevo nombre');
+
+//    alerta();
+
+    var miPapa = new Persona("Eduardo", 85, 1.75, "masculino", 7);
+
+    miPapa.edad = 65;
+    
+    alert(miPapa.nombre);
+//    alert(miPapa.puedeBever);
+    
+    if (miPapa.puedeBever()) {
+      alert(miPapa.nombre + ' puede bever porque tiene ' + miPapa.edad + ' años!!\nPuede bever hace ' + (miPapa.edad - 18) +' años');
+    } else {
+      alert(miPapa.nombre + ' no puede bever sino hasta dentro de ' + (18 - miPapa.edad) + ' años!!');
+    }
+
+    e.preventDefault();
+  });
+
+
+  //Funciones útiles
+  function parImpar(numero) {
+    if (numero % 2 == 0) { // Lasentencia if(...) es el inicio de
+      return 'par'; // una estructura de control
+    } else {
+      return 'impar';
+    }
+  }
+
+  function info(cadena) {
+    var resultado = 'La cadena "' + cadena + '" ';
+    //Comprobar mayúsculas/minúsculas
+    if (cadena == cadena.toUpperCase()) {
+      resultado += 'está formada sólo por mayúsculas';
+    } else if (cadena == cadena.toLowerCase()) {
+      resultado += 'está formada sólo por minúsculas';
+    } else {
+      resultado += 'está formada por mayúsculas y minúsculas';
+    }
+    return resultado;
+  }
+
+  function palindromo(cadena) {
+    //Pasar a minusculas la cadena
+    var cadenaOriginal = cadena.toLowerCase();
+
+    //eliminar los espacios en blanco
+    var cadenaSinEspacios = cadenaOriginal.replace(/ /g, '');
+
+    //convertir la cadena en array
+    var letras = cadenaSinEspacios.split('');
+    var letrasReves = cadenaSinEspacios.split('').reverse();
+    
+    var iguales = true;
+    for (i = 0; i <= (letras.length) / 2; i++) {
+      if (letras[i] != letrasReves[i]) {
+        iguales = false;
+        break;
+      }
+    }
+    if (iguales) {
+      return true;
+    } else {
+      return false;
+    }
+  } 
+  
+  function Persona(nombre, peso, estatura, sexo, edad) {
+    this.nombre = nombre;
+    this.peso = peso;
+    this.estatura = estatura;
+    this.sexo = sexo;
+    this.edad = edad;
+    this.puedeBever = function(){
+      return (this.edad >= 18);
+    };
+  }
 
 
 
-})
+});

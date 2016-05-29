@@ -11,6 +11,8 @@
   <title>Módulo 3 | HTML5 UMB virtual</title>
 
   <link rel="stylesheet" href="css/miEstilo.css">
+  <script src="js/jquery-1.12.3.min.js"></script>
+  <script src="js/scriptsMod3.js"></script>
 </head>
 
 <body>
@@ -365,7 +367,7 @@ $('.ej32').click(function(e){
     var numeroTope = parseInt(prompt('Ingrese un número tope', '50'))
       , texto = '';
     for (i = 0; i &lt;= numeroTope; i += 2) {
-      texto = texto + '' + i + ' ';
+      texto = texto + i + ' ';
     }
     alert(texto);
     e.preventDefault();
@@ -380,7 +382,7 @@ $('.ej32').click(function(e){
     var numeroTope = parseInt(prompt('Ingrese un número tope', '50'))
       , texto = '';
     for (i = 1; i &lt;= numeroTope; i += 2) {
-      texto = texto + '' + i + ' ';
+      texto = texto + i + ' ';
     }
     alert(texto);
     e.preventDefault();
@@ -390,7 +392,7 @@ $('.ej32').click(function(e){
             <p>Crea un programa en JavaScript que solicite al usuario un número y muestre la tabla de multiplicar del número introducido.</p>
             <pre>
 //Ejercicio 5.3
-  //Tabla de multipllicar
+  //Tabla de multiplicar
   $('.ej53').click(function (e) {
     var numero = parseInt(prompt('Ingrese número a multiplicar','7'));
     var container = $('.tabla-mult tbody');
@@ -592,41 +594,6 @@ $('.ej54').click(function (e) {
               <img src="img/ej8.png" alt="ejercicio 8" />
               <figcaption>Ejercicio 8</figcaption>
             </figure>
-            <!-- <pre>
-  //Ejercicio 8
-  //
-  $('.ej8').click(function (e) {
-    /*La siguiente línea contiene un error, 
-    ya que el metodo prompt retorna un string, 
-    la función retornará un error, ya que los
-    strings no pueden someterse a operaciones 
-    matemáticas. Hay que hacer type casting a 
-    integer*/
-
-    //var numero = prompt('Introduce un número entero');
-    //error de tipo de dato
-    var numero = parseInt(prompt('Introduce un número entero'));
-
-
-    //Esta línea ejecuta la función parImpar 
-    //pasando el valor de la variable numero como parámetro
-    var resultado = parImpar(numero);
-
-    //Esta línea muestra el resultado de la 
-    //ejecución en una ventana flotante
-    alert('El número ' + numero + ' es ' + resultado);
-
-    /*Aquí se define la función parImpar, que toma un parámetro 
-    y hace la verificación de si es o no par */
-    function parImpar(numero) {
-      if (numero % 2 == 0) { // Lasentencia if(...) es el inicio de
-        return 'par'; // una estructura de control
-      } else {
-        return 'impar';
-      }
-    }
-    e.preventDefault();
-  })</pre> -->
             <figure class="centrada">
               <img src="img/Ej8R.png" alt="Respuesta ejercicio 8" />
               <figcaption>Respuesta ejercicio 8</figcaption>
@@ -636,6 +603,9 @@ $('.ej54').click(function (e) {
 
           </div>
         </article>
+
+
+
 
         <article class="ejercicio">
           <header class="titulo-ejercicio">
@@ -659,9 +629,18 @@ $('.ej54').click(function (e) {
               <figcaption>Ejercicio 9</figcaption>
             </figure>
 
+            <figure>
+              <img src="img/Ej9R.png" alt="Ejercicio 9 desarrollado en la página" />
+              <figcaption>Ejercicio 9 desarrollado en la página</figcaption>
+            </figure>
             <script type="text/javascript">
               function calcula(total) {
-                total.resul.value = eval(total.expr.value)
+                //La función toma un parámetro
+                //y asigna al resultado el valor
+                //que calcula en la expresión
+
+                //resul y expr son los nombres de los input en el formulario
+                total.resul.value = eval(total.expr.value);
               }
             </script>
 
@@ -673,23 +652,221 @@ $('.ej54').click(function (e) {
                 <br />del estilo: 4*3
                 <br />o del estilo: (4*3)/(3*2)</p>
               <p>Luego pulsa calcular</p>
-              <form name="calculadora">
-                <h2>Expresión</h2>
-                <input type="text" name="expr">
-                <h2>Resultado</h2>
-                <input type="text" name="resul">
-
-                <input type="button" onClick="calcula(this.form);" value="Calcular">
-
+              <form name="calculadora" class="recopila-datos">
+                <h2>Calculadora</h2>
+                <div class="campo">
+                  <label for="expr">Expresión</label>
+                  <!--a este campo accede la función por su atributo name-->
+                  <input type="text" name="expr">
+                  <input type="button" onClick="calcula(this.form);" value="Calcular">
+                </div>
+                <div class="campo">
+                  <label for="resul" class="mover">Resultado</label>
+                  <!--a este campo accede la función por su atributo name-->
+                  <input type="text" name="resul" disabled>
+                </div>
               </form>
-
-
-
             </div>
 
           </div>
         </article>
 
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 10</h1>
+              <h3 class="subtitulo">Nómina</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>El estudioso debe hacer un programa en JavaScript que calcule la nómina para una persona donde el programa debe pedir:</p>
+            <ul>
+              <li>DATOS PERSONALES
+                <ul>
+                  <li>Nombre del empleado</li>
+                  <li>Documento de identidad</li>
+                </ul>
+              </li>
+              <li>Días laborados</li>
+              <li>Salario mensual:</li>
+              <strong>DEVENGADOS:</strong>
+              <ul>
+                <li>Subsidio de Transporte: Valor del subsidio de transporte mensual definido por el gobierno para cada año.</li>
+                <li>Salario a pagar; (este debe calcularse con base a los días laborados, es decir si su salario mensual es $800.000 mensual y labora 15 días su salario a pagar es $400.000)</li>
+              </ul>
+              <strong>DEDUCIDOS:</strong>
+              <ul>
+                <li>Salud: 4% de su salario mensual </li>
+                <li>Pension: 4% de su salario mensual</li>
+              </ul>
+              <strong>TOTAL A PAGAR:</strong>
+              <ul>
+                <li>Calcular el total a pagar donde se tiene en cuenta DEVENGADOS-DEDUCIDOS.</li>
+              </ul>
+              </li>
+            </ul>
+            <form class="recopila-datos">
+              <h3>Calculadora de nómina</h3>
+              <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="campo">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" name="nombre" value="">
+                </div>
+                <div class="campo">
+                  <label for="ident">Documento de identidad:</label>
+                  <input type="text" name="ident" value="">
+                </div>
+                <div class="campo">
+                  <label for="salarioMes">Salario mensual:</label>
+                  <input type="number" name="salarioMes" value="689455">
+                </div>
+                <div class="campo">
+                  <label for="diasLaborados">Días laborados:</label>
+                  <input type="number" name="diasLaborados" pattern="[0-9]{1,2}" title="Entre 1 y 31" max="31" value="15">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>DEVENGADOS:</legend>
+                <div class="campo">
+                  <label for="subsidioTransporte">Subsidio de transporte:</label>
+                  <input type="text" name="subsidioTransporte" value="77700" disabled>
+                </div>
+                <div class="campo">
+                  <label for="salarioNeto">Salario neto:</label>
+                  <input type="text" name="salarioNeto" disabled>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>DEDUCIDOS:</legend>
+                <div class="campo">
+                  <label for="salud">Salud:</label>
+                  <input type="number" name="salud" disabled>
+                </div>
+                <div class="campo">
+                  <label for="pension">Pensión:</label>
+                  <input type="number" name="pension" disabled>
+                </div>
+              </fieldset>
+
+              <fieldset class="acento">
+                <legend>TOTAL A PAGAR:</legend>
+                <div class="campo">
+                  <input type="text" name="total" disabled>
+                </div>
+              </fieldset>
+
+              <input type="button" value="Calcular nómina" onClick="nomina(this.form)">
+
+            </form>
+
+            <script type="text/javascript">
+              function nomina(datos) {
+                var neim = datos.nombre.value
+                  , documento = datos.ident.value
+                  , sueldo = datos.salarioMes.value
+                  , dias = datos.diasLaborados.value
+                  , subsidio = datos.subsidioTransporte.value;
+
+                //Validación de subsidio de transporte
+                //no hay subsidio para mas de 2 mínimos
+                if (sueldo > 1378910) {
+                  datos.subsidioTransporte.value = 0;
+                  subsidio = 0;
+                } else {
+                  datos.subsidioTransporte.value = 77700;
+                  subsidio = 77700;
+                }
+
+                //Calculo de salario neto
+                var neto = (sueldo / 30) * dias;
+                datos.salarioNeto.value = neto;
+
+                //Cálculo de salud y pensión
+                var dctoAportes = 0.04 * sueldo;
+                datos.salud.value = dctoAportes;
+                datos.pension.value = dctoAportes;
+
+
+                //Cálculo de total a pagar
+                totalPago = parseInt(neto + subsidio - (2 * dctoAportes));
+                datos.total.value = totalPago;
+
+              }
+            </script>
+
+          </div>
+        </article>
+
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 11</h1>
+              <h3 class="subtitulo">Análisis de un programa</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>A continuación encontrará un programa en JavaScript, El estudioso debe:</p>
+            <ol>
+              <li>Reescribir el programa en un editor de texto</li>
+              <li>Analizar el programa, en el caso que el programa tenga errores el estudioso deberá corregirlos</li>
+              <li>Identificar la función</li>
+              <li>Analizar las estructuras de control que hay</li>
+              <li>Por medio de comentarios escribir el desarrollo del programa línea a línea.</li>
+            </ol>
+            <figure>
+              <img src="img/ej11.png" alt="Ejercicio 11">
+              <figcaption>Ejercicio 11</figcaption>
+            </figure>
+            <a href="#" class="ej11 btn-mod3">Correr el ejercicio 11</a>
+          </div>
+        </article>
+
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 12</h1>
+              <h3 class="subtitulo">Análisis de un programa</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <p>A continuación encontrará un programa en JavaScript, el estudioso debe:</p>
+            <ol>
+              <li>Reescribir el programa en un editor de texto.</li>
+              <li>Analizar el programa, en el caso que el programa tenga errores el estudioso deberá corregirlos.</li>
+              <li>Analizar la ejecución del programa. Identificar la función.</li>
+              <li>Analizar las estructuras de control que hay.</li>
+              <li>Por medio de comentarios escribir el desarrollo del programa línea a línea.</li>
+            </ol>
+            <figure>
+              <img src="img/ej12.png" alt="Ejercicio 11">
+              <figcaption>Ejercicio 11</figcaption>
+            </figure>
+
+            <a href="#" class="ej12 btn-mod3">Correr el ejercicio 12</a>
+          </div>
+        </article>
+
+
+        <article class="ejercicio">
+          <header class="titulo-ejercicio">
+            <hgroup>
+              <h1 class="titulo">Ejercicio 13</h1>
+              <h3 class="subtitulo">Objetos</h3>
+            </hgroup>
+          </header>
+          <div class="main" role="main">
+            <ol>
+              <li>El estudioso debe crear un objeto llamado persona, debe asignarle al objeto los siguientes valores (nombre, peso, estatura, sexo, edad)</li>
+              <li>Mostrar una ventana de alerta con el nombre de la persona, peso, estatura, sexo, edad</li>
+              <li>Revise el código teniendo en cuenta que debe cargar nuevos valores al objeto persona y mostrarlos en una ventana de alerta con los nuevos datos.</li>
+            </ol>
+            <a href="#" class="ej13 btn-mod3">Correr el ejercicio 13</a>
+          </div>
+
+        </article>
 
 
 
@@ -719,8 +896,7 @@ $('.ej54').click(function (e) {
   </div>
 
 
-  <script src="js/jquery-1.12.3.min.js"></script>
-  <script src="js/scriptsMod3.js"></script>
+
 </body>
 
 </html>

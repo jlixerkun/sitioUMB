@@ -84,6 +84,7 @@ a {
 .titulo-sitio {
   flex: 1;
   margin-bottom: 0;
+  font-size: 20px;
   a {
     color: $claro;
     &:hover {
@@ -191,6 +192,12 @@ figure.derecha {
   }
 }
 
+figure {
+  img {
+    max-width: 100%;
+  }
+}
+
 figcaption {
   font-family: $sourceSans;
   font-size: 11px;
@@ -237,14 +244,14 @@ table.zebra {
   justify-content: center;
   position: fixed;
   width: 100vw;
-  height: 110px;
+  height: 80px;
   box-shadow: 0 2px 0 $color0, 0 4px 0 $color1, 0 6px 0 $color2, 0 8px 0 $color3, 0 10px 0 $color4, 0 10px 2px #000;
   z-index: 100;
 }
 
 .cuerpo {
   padding: 20px 0;
-  margin-top: 110px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   line-height: 1.6;
@@ -334,6 +341,17 @@ label {
 
 fieldset {
   margin-bottom: 1em;
+  &.acento {
+    font-size: 110%;
+    font-style: italic;
+    font-weight: bolder;
+    input {
+      font-weight: inherit;
+      font-style: inherit;
+      font-size: inherit;
+      width: 100%;
+    }
+  }
 }
 
 input,
@@ -623,7 +641,7 @@ pre {
   display: none;
   width: 300px;
   margin: 1em auto;
-  text-align:center;
+  text-align: center;
 }
 
 .tabla-mult {
@@ -648,7 +666,7 @@ pre {
   &.ej73 {
     width: 300px;
     margin: 1em auto;
-    text-align:center;
+    text-align: center;
   }
   span {
     margin-right: 10px;
